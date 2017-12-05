@@ -29,22 +29,26 @@ public class PrimaryPresenter {
 
     @FXML
     void onClickAblauf(ActionEvent event) {
-    	ablaufBtn.onActionProperty();
+    	ablaufBtn.setOnAction(e -> 
+        MobileApplication.getInstance().switchView(GluonApplication.SECONDARY_VIEW));
     }
 
     @FXML
     void onClickChecklist(ActionEvent event) {
-
+    	checklistbtn.setOnAction(e -> 
+        MobileApplication.getInstance().switchView(GluonApplication.CHECKLIST_VIEW));
     }
 
     @FXML
     void onClickGes(ActionEvent event) {
-
+    	gesBtn.setOnAction(e -> 
+        MobileApplication.getInstance().switchView(GluonApplication.GESUNDHEITSZUSTAND_VIEW));
     }
 
     @FXML
     void onClickKontakte(ActionEvent event) {
-
+    	kontakteBtn.setOnAction(e -> 
+        MobileApplication.getInstance().switchView(GluonApplication.KONTAKTE_VIEW));
     }
 
 

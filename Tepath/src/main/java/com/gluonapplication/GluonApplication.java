@@ -25,7 +25,7 @@ public class GluonApplication extends MobileApplication {
     public void init() {
     	addViewFactory(PRIMARY_VIEW, () -> new PrimaryView(PRIMARY_VIEW).getView());
         addViewFactory(SECONDARY_VIEW, () -> new SecondaryView(SECONDARY_VIEW).getView());
-        addViewFactory(CHECKLIST_VIEW, ()-> new ChecklistView(CHECKLIST_VIEW).getView());
+        addViewFactory(CHECKLIST_VIEW, () -> new ChecklistView(CHECKLIST_VIEW).getView());
         addViewFactory(KONTAKTE_VIEW, () -> new KontakteView(KONTAKTE_VIEW).getView());
         addViewFactory(GESUNDHEITSZUSTAND_VIEW, () -> new GesundheitszustandView(GESUNDHEITSZUSTAND_VIEW).getView());
         

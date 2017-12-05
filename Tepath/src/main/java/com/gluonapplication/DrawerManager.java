@@ -13,14 +13,15 @@ import com.gluonhq.charm.glisten.visual.MaterialDesignIcon;
 import static com.gluonapplication.GluonApplication.MENU_LAYER;
 import static com.gluonapplication.GluonApplication.PRIMARY_VIEW;
 import static com.gluonapplication.GluonApplication.SECONDARY_VIEW;
+import static com.gluonapplication.GluonApplication.CHECKLIST_VIEW;
+import static com.gluonapplication.GluonApplication.KONTAKTE_VIEW;
+import static com.gluonapplication.GluonApplication.GESUNDHEITSZUSTAND_VIEW;
 import javafx.scene.Node;
 import javafx.scene.image.Image;
 
 public class DrawerManager {
 
-	private static final String CHECKLIST_VIEW = "Checklisten";
-	private static final String KONTAKTE_VIEW = "Kontakte";
-	private static final String GESUNDHEITSZUSTAND_VIEW = "Gesundheitszustand";
+
 	private final NavigationDrawer drawer;   
 
     public DrawerManager() {

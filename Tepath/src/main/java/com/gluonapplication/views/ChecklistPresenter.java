@@ -51,7 +51,7 @@ public class ChecklistPresenter {
 
     }
 
-    @FXML
+
     public void initialize() {
         viewChecklist.setShowTransitionFactory(BounceInRightTransition::new);
         
