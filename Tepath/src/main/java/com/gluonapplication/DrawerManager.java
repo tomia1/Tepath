@@ -18,7 +18,7 @@ import javafx.scene.image.Image;
 
 public class DrawerManager {
 
-    private final NavigationDrawer drawer;
+    private final NavigationDrawer drawer;   
 
     public DrawerManager() {
         this.drawer = new NavigationDrawer();
