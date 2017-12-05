@@ -1,9 +1,5 @@
 package com.gluonapplication.views;
 
-import java.util.ResourceBundle;
-
-import javax.print.DocFlavor.URL;
-
 import com.gluonapplication.GluonApplication;
 import com.gluonhq.charm.glisten.animation.BounceInRightTransition;
 import com.gluonhq.charm.glisten.application.MobileApplication;
@@ -17,12 +13,6 @@ import javafx.scene.control.Button;
 
 public class ChecklistPresenter {
 	
-
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     @FXML
     private View viewChecklist;
@@ -53,16 +43,16 @@ public class ChecklistPresenter {
 
 
     public void initialize() {
-        viewChecklist.setShowTransitionFactory(BounceInRightTransition::new);
-        
-        
-        viewChecklist.showingProperty().addListener((obs, oldValue, newValue) -> {
-            if (newValue) {
-                AppBar appBar = MobileApplication.getInstance().getAppBar();
-                appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 
-                        MobileApplication.getInstance().showLayer(GluonApplication.MENU_LAYER)));
-                appBar.setTitleText("Checklisten");
-            }
-        });
+    	viewChecklist.setShowTransitionFactory(BounceInRightTransition::new);
+    	 viewChecklist.showingProperty().addListener((obs, oldValue, newValue) -> {
+             if (newValue) {
+                 AppBar appBar = MobileApplication.getInstance().getAppBar();
+                 appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 
+                         MobileApplication.getInstance().showLayer(GluonApplication.MENU_LAYER)));
+                 appBar.setTitleText("Checklisten");
+                 appBar.getActionItems().add(MaterialDesignIcon.SEARCH.button(e -> 
+                         System.out.println("Search")));
+             }
+         });
     }
 }
