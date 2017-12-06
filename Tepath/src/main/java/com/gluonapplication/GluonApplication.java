@@ -17,12 +17,16 @@ public class GluonApplication extends MobileApplication {
 	public static final String PRIMARY_VIEW = HOME_VIEW; // primaryView ist die Startseite
     public static final String SECONDARY_VIEW = "Ablauf"; // secondaryView ist die Ablaufseite
     public static final String MENU_LAYER = "Side Menu";
-	public static final String CHECKLIST_VIEW = "Checklisten";
-	public static final String KONTAKTE_VIEW = "Kontakte";
-	public static final String GESUNDHEITSZUSTAND_VIEW = "Gesundheitszustand";
+	public static final String CHECKLIST_VIEW = "Checklisten"; // die Sicht mit den Checklisten
+	public static final String KONTAKTE_VIEW = "Kontakte"; // Konatkpersonen
+	public static final String GESUNDHEITSZUSTAND_VIEW = "Gesundheitszustand"; // Gesundheitszustand des Patientin
     
     @Override
     public void init() {
+    	/**
+    	 * Hier werden die verschiedenen Sichten der Applikation erstellt.
+    	 * Das Menü wird auch hier erstellt. Das Menü wird auf der linken Seite eingeblendet.
+    	 */
     	addViewFactory(PRIMARY_VIEW, () -> new PrimaryView(PRIMARY_VIEW).getView());
         addViewFactory(SECONDARY_VIEW, () -> new SecondaryView(SECONDARY_VIEW).getView());
         addViewFactory(CHECKLIST_VIEW, () -> new ChecklistView(CHECKLIST_VIEW).getView());
@@ -34,7 +38,7 @@ public class GluonApplication extends MobileApplication {
 
     @Override
     public void postInit(Scene scene) {
-        Swatch.BLUE.assignTo(scene);
+        Swatch.BLUE.assignTo(scene); // Die Farbe AppBar ist hier blau.
 
         scene.getStylesheets().add(GluonApplication.class.getResource("style.css").toExternalForm());
         ((Stage) scene.getWindow()).getIcons().add(new Image(GluonApplication.class.getResourceAsStream("/tep.JPG")));
