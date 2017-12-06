@@ -41,63 +41,63 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<View maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<View fx:id="kontakt" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" stylesheets="@kontakte.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gluonapplication.views.KontaktePresenter">
    <top>
       <HBox prefHeight="48.0" prefWidth="350.0" BorderPane.alignment="CENTER" />
    </top>
    <center>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox prefHeight="40.0" prefWidth="338.0">
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="338.0">
                <children>
                   <ImageView fitHeight="40.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../Hausarzt.png" />
                      </image>
                   </ImageView>
-                  <Button lineSpacing="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Hausarzt">
+                  <Button fx:id="hausarzt" lineSpacing="10.0" mnemonicParsing="false" onAction="#buttonHausarztClick" prefHeight="50.0" prefWidth="100.0" text="Hausarzt">
                      <HBox.margin>
                         <Insets bottom="5.0" left="60.0" top="5.0" />
                      </HBox.margin>
                   </Button>
                </children>
             </HBox>
-            <HBox prefHeight="55.0" prefWidth="350.0">
+            <HBox alignment="CENTER" prefHeight="55.0" prefWidth="350.0">
                <children>
                   <ImageView fitHeight="40.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../Spital.png" />
                      </image>
                   </ImageView>
-                  <Button lineSpacing="10.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="100.0" text="Spital">
+                  <Button fx:id="spital" lineSpacing="10.0" mnemonicParsing="false" onAction="#buttonSpitalClick" prefHeight="37.0" prefWidth="100.0" text="Spital">
                      <HBox.margin>
                         <Insets bottom="5.0" left="60.0" top="5.0" />
                      </HBox.margin>
                   </Button>
                </children>
             </HBox>
-            <HBox prefHeight="50.0" prefWidth="250.0">
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="250.0">
                <children>
                   <ImageView fitHeight="66.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../apotheke.png" />
                      </image>
                   </ImageView>
-                  <Button lineSpacing="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="100.0" text="Apotheke">
+                  <Button fx:id="apotheke" lineSpacing="10.0" mnemonicParsing="false" onAction="#buttonApothekeClick" prefHeight="44.0" prefWidth="100.0" text="Apotheke">
                      <HBox.margin>
                         <Insets bottom="5.0" left="40.0" top="5.0" />
                      </HBox.margin>
                   </Button>
                </children>
             </HBox>
-            <HBox prefHeight="45.0" prefWidth="350.0">
+            <HBox alignment="CENTER" prefHeight="45.0" prefWidth="350.0">
                <children>
                   <ImageView fitHeight="55.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../Spezialist.png" />
                      </image>
                   </ImageView>
-                  <Button lineSpacing="10.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="100.0" text="Spezialist">
+                  <Button fx:id="spezialist" lineSpacing="10.0" mnemonicParsing="false" onAction="#buttonSpezialistClick" prefHeight="41.0" prefWidth="100.0" text="Spezialist">
                      <HBox.margin>
                         <Insets bottom="5.0" left="30.0" top="5.0" />
                      </HBox.margin>
@@ -107,14 +107,14 @@
                   </Button>
                </children>
             </HBox>
-            <HBox prefHeight="55.0" prefWidth="350.0">
+            <HBox alignment="CENTER" prefHeight="55.0" prefWidth="350.0">
                <children>
                   <ImageView fitHeight="68.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../Reha.png" />
                      </image>
                   </ImageView>
-                  <Button lineSpacing="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Reha">
+                  <Button fx:id="reha" lineSpacing="10.0" mnemonicParsing="false" onAction="#buttonRehaClick" prefHeight="50.0" prefWidth="100.0" text="Reha">
                      <HBox.margin>
                         <Insets bottom="5.0" left="20.0" top="5.0" />
                      </HBox.margin>

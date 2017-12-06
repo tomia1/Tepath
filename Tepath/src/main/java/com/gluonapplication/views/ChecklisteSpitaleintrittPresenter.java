@@ -9,25 +9,24 @@ import com.gluonhq.charm.glisten.visual.MaterialDesignIcon;
 
 import javafx.fxml.FXML;
 
-public class GesundheitszustandPresenter {
+public class ChecklisteSpitaleintrittPresenter {
 	
-	
-	@FXML
-	private View gesundheitsz;
-	
-	
-	public void initialize() {
-		gesundheitsz.setShowTransitionFactory(BounceInRightTransition::new);
-   	 gesundheitsz.showingProperty().addListener((obs, oldValue, newValue) -> {
+
+    @FXML
+    private View spitaleintritt;
+
+
+    public void initialize() {
+    	spitaleintritt.setShowTransitionFactory(BounceInRightTransition::new);
+   	 spitaleintritt.showingProperty().addListener((obs, oldValue, newValue) -> {
             if (newValue) {
                 AppBar appBar = MobileApplication.getInstance().getAppBar();
                 appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 
                         MobileApplication.getInstance().showLayer(GluonApplication.MENU_LAYER)));
-                appBar.setTitleText("Gesundheitszustand");
+                appBar.setTitleText("Vor Spitaleintritt");
                 appBar.getActionItems().add(MaterialDesignIcon.SEARCH.button(e -> 
                         System.out.println("Search")));
             }
         });
-
-}
+    }
 }

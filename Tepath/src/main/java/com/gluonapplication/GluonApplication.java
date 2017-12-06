@@ -1,6 +1,7 @@
 package com.gluonapplication;
 
 import com.gluonapplication.views.ChecklistView;
+import com.gluonapplication.views.ChecklisteSpitaleintrittView;
 import com.gluonapplication.views.GesundheitszustandView;
 import com.gluonapplication.views.KontakteView;
 import com.gluonapplication.views.PrimaryView;
@@ -20,6 +21,7 @@ public class GluonApplication extends MobileApplication {
 	public static final String CHECKLIST_VIEW = "Checklisten"; // die Sicht mit den Checklisten
 	public static final String KONTAKTE_VIEW = "Kontakte"; // Konatkpersonen
 	public static final String GESUNDHEITSZUSTAND_VIEW = "Gesundheitszustand"; // Gesundheitszustand des Patientin
+	public static final String CHECKLISTESPITALEINTRITT_VIEW = "Spitaleintritt";
     
     @Override
     public void init() {
@@ -32,6 +34,7 @@ public class GluonApplication extends MobileApplication {
         addViewFactory(CHECKLIST_VIEW, () -> new ChecklistView(CHECKLIST_VIEW).getView());
         addViewFactory(KONTAKTE_VIEW, () -> new KontakteView(KONTAKTE_VIEW).getView());
         addViewFactory(GESUNDHEITSZUSTAND_VIEW, () -> new GesundheitszustandView(GESUNDHEITSZUSTAND_VIEW).getView());
+        addViewFactory(CHECKLISTESPITALEINTRITT_VIEW, () -> new ChecklisteSpitaleintrittView(CHECKLISTESPITALEINTRITT_VIEW).getView());
         
         addLayerFactory(MENU_LAYER, () -> new SidePopupView(new DrawerManager().getDrawer()));
     }

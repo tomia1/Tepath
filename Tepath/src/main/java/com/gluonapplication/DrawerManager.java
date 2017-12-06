@@ -27,20 +27,20 @@ public class DrawerManager {
     public DrawerManager() {
         this.drawer = new NavigationDrawer();
         
-        /**
-         * Die Beschriftung im eingeblendeten Menü ist hier "TEPATH" festgelegt worden.
-         * Darunter wird das Icon der Applikation plaziert.
-         */
+        
+        // Die Beschriftung im eingeblendeten Menü ist hier "TEPATH" festgelegt worden.
+         //Darunter wird das Icon der Applikation plaziert.
+         
         
         NavigationDrawer.Header header = new NavigationDrawer.Header("TEPATH",
                 "Menu",
                 new Avatar(21, new Image(DrawerManager.class.getResourceAsStream("/tep.JPG"))));
         drawer.setHeader(header);
         
-        /**
-         * Die Verschiedenen Menüinhalte werden hier erstellt. 
-         * Es wird der Name benannt, der Icon der neben dem Namen steht und die Ansicht die geöffnet wird.
-         */
+        
+          //Die Verschiedenen Menüinhalte werden hier erstellt. 
+          //Es wird der Name benannt, der Icon der neben dem Namen steht und die Ansicht die geöffnet wird.
+         
         final Item startseite = new ViewItem("Startseite", MaterialDesignIcon.HOME.graphic(), PRIMARY_VIEW, ViewStackPolicy.SKIP);
         final Item ablauf = new ViewItem("Ablauf", MaterialDesignIcon.QUEUE_PLAY_NEXT.graphic(), SECONDARY_VIEW, ViewStackPolicy.SKIP);
         final Item checkliste = new ViewItem("Checklisten", MaterialDesignIcon.CHECK.graphic(), CHECKLIST_VIEW, ViewStackPolicy.SKIP);
@@ -58,9 +58,9 @@ public class DrawerManager {
             drawer.getItems().add(quitItem);
         }
         
-        /**
-         * Wenn im Menü etwas ausgewählt wird und die Seite angezeit wird, verschwindet der Menü-Layer.
-         */
+        
+         //Wenn im Menü etwas ausgewählt wird und die Seite angezeit wird, verschwindet der Menü-Layer.
+         
         
         drawer.addEventHandler(NavigationDrawer.ITEM_SELECTED, 
                 e -> MobileApplication.getInstance().hideLayer(MENU_LAYER));

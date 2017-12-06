@@ -1,9 +1,5 @@
 package com.gluonapplication.views;
 
-import java.util.ResourceBundle;
-
-import javax.print.DocFlavor.URL;
-
 import com.gluonapplication.GluonApplication;
 import com.gluonhq.charm.glisten.animation.BounceInRightTransition;
 import com.gluonhq.charm.glisten.application.MobileApplication;
@@ -17,11 +13,6 @@ import javafx.scene.control.Button;
 
 public class KontaktePresenter {
 	
-	  @FXML
-	    private ResourceBundle resources;
-
-	    @FXML
-	    private URL location;
 
 	    @FXML
 	    private View kontakt;
@@ -66,19 +57,18 @@ public class KontaktePresenter {
 
 	    }
 
-	    @FXML
-	    void initialize() {
+	    public void initialize() {
 	    	kontakt.setShowTransitionFactory(BounceInRightTransition::new);
-	        
-	        kontakt.showingProperty().addListener((obs, oldValue, newValue) -> {
-	            if (newValue) {
-	                AppBar appBar = MobileApplication.getInstance().getAppBar();
-	                appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 
-	                        MobileApplication.getInstance().showLayer(GluonApplication.MENU_LAYER)));
-	                appBar.setTitleText("Kontakte");
-	                
-	            }
-	        });
+	    	 kontakt.showingProperty().addListener((obs, oldValue, newValue) -> {
+	             if (newValue) {
+	                 AppBar appBar = MobileApplication.getInstance().getAppBar();
+	                 appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 
+	                         MobileApplication.getInstance().showLayer(GluonApplication.MENU_LAYER)));
+	                 appBar.setTitleText("Kontakte");
+	                 appBar.getActionItems().add(MaterialDesignIcon.SEARCH.button(e -> 
+	                         System.out.println("Search")));
+	             }
+	         });
 	    }
 
 }
