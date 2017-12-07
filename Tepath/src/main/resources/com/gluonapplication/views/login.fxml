@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<View fx:id="primary" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" stylesheets="@login.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gluonapplication.views.PrimaryPresenter">
+<View fx:id="primary" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" stylesheets="@login.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gluonapplication.views.PrimaryPresenter">
    <children>
       <VBox prefHeight="200.0" prefWidth="100.0" />
    </children>
@@ -42,7 +42,7 @@
             </HBox>
             <HBox alignment="TOP_RIGHT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="260.0">
                <children>
-                  <Button fx:id="anmelden" minWidth="45.0" mnemonicParsing="false" onAction="#MakeLogin" onMouseClicked="#gotToHomePage" prefHeight="32.0" prefWidth="88.0" text="Anmelden" />
+                  <Button fx:id="anmelden" minWidth="45.0" mnemonicParsing="false" onAction="#MakeLogin" prefHeight="32.0" prefWidth="88.0" text="Anmelden" />
                </children>
             </HBox>
          </children>
