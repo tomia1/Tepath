@@ -1,43 +1,80 @@
 package com.gluonapplication.views;
 
+import com.gluonapplication.GluonApplication;
 import com.gluonhq.charm.glisten.application.MobileApplication;
 import com.gluonhq.charm.glisten.control.AppBar;
 import com.gluonhq.charm.glisten.mvc.View;
+import com.gluonhq.charm.glisten.visual.MaterialDesignIcon;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 
 public class PrimaryPresenter {
 
-	@FXML
-	private View primary;
-	
-	@FXML
-	private Button anmelden;
-	
-	@FXML
-	private TextField userName;
-	
-	@FXML
-	private PasswordField password;
-	
-	@FXML
-	void MakeLogin(ActionEvent event) {
-		
-	}
-    
+    @FXML
+    private View primary;
+
+    @FXML
+    private Button ablaufBtn;
+
+    @FXML
+    private Button checklistbtn;
+
+    @FXML
+    private Button kontakteBtn;
+
+    @FXML
+    private Button gesBtn;
+
+    @FXML
+    void onClickAblauf(ActionEvent event) {
+    	ablaufBtn.setOnAction(e -> 
+        MobileApplication.getInstance().switchView(GluonApplication.SECONDARY_VIEW));
+    }
+
+    @FXML
+    void onClickChecklist(ActionEvent event) {
+    	checklistbtn.setOnAction(e -> 
+        MobileApplication.getInstance().switchView(GluonApplication.CHECKLIST_VIEW));
+    }
+
+    @FXML
+    void onClickGes(ActionEvent event) {
+    	gesBtn.setOnAction(e -> 
+        MobileApplication.getInstance().switchView(GluonApplication.GESUNDHEITSZUSTAND_VIEW));
+    }
+
+    @FXML
+    void onClickKontakte(ActionEvent event) {
+    	kontakteBtn.setOnAction(e -> 
+        MobileApplication.getInstance().switchView(GluonApplication.KONTAKTE_VIEW));
+    }
+
 
     public void initialize() {
         primary.showingProperty().addListener((obs, oldValue, newValue) -> {
             if (newValue) {
                 AppBar appBar = MobileApplication.getInstance().getAppBar();
-                appBar.setTitleText("Login");
+                appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 
+                        MobileApplication.getInstance().showLayer(GluonApplication.MENU_LAYER)));
+                appBar.setTitleText("Startseite");
+                appBar.getActionItems().add(MaterialDesignIcon.SEARCH.button(e -> 
+                        System.out.println("Search")));
             }
         });
     }
 
-
+////<<<<<<< HEAD
+//    @FXML
+//    void buttonClick() {
+//        label.setText("Hello JavaFX Universe!");
+//    }
+//    @FXML
+//    void myBtnClick() {
+//        label.setText("keep on!");
+//    }
+//
+//=======
+////>>>>>>> branch 'master' of https://github.com/tomia1/Tepath2.git
 }
