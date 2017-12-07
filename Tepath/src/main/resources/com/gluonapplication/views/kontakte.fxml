@@ -57,7 +57,7 @@
                      <graphic>
                         <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../../../../Desktop/23420-200.png" />
+                              <Image url="@../../../Hausarzt.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -76,7 +76,7 @@
                      <graphic>
                         <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../../../../Desktop/7.png" />
+                              <Image url="@../../../Spital.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -95,7 +95,7 @@
                      <graphic>
                         <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../../../../Desktop/3.png" />
+                              <Image url="@../../../Apotheke%20(1).png" />
                            </image></ImageView>
                      </graphic>
                   </Button>
@@ -113,7 +113,7 @@
                      <graphic>
                         <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../../../../Desktop/8.png" />
+                              <Image url="@../../../Spezialist.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -132,7 +132,7 @@
                      <graphic>
                         <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../../../../Desktop/6.png" />
+                              <Image url="@../../../Reha.png" />
                            </image>
                         </ImageView>
                      </graphic>
