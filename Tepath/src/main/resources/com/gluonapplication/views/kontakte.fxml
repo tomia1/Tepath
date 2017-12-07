@@ -46,13 +46,13 @@
       <HBox prefHeight="48.0" prefWidth="350.0" BorderPane.alignment="CENTER" />
    </top>
    <center>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="350.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="CENTER" prefHeight="44.0" prefWidth="350.0">
+            <HBox alignment="CENTER" prefHeight="44.0" prefWidth="346.0">
                <children>
                   <Button fx:id="hausarzt" lineSpacing="10.0" mnemonicParsing="false" onAction="#buttonHausarztClick" prefHeight="30.0" prefWidth="126.0" text="Hausarzt">
                      <HBox.margin>
-                        <Insets bottom="5.0" left="60.0" top="5.0" />
+                        <Insets left="5.0" top="5.0" />
                      </HBox.margin>
                      <graphic>
                         <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
@@ -64,14 +64,14 @@
                   </Button>
                </children>
                <VBox.margin>
-                  <Insets bottom="10.0" />
+                  <Insets left="5.0" top="5.0" />
                </VBox.margin>
             </HBox>
             <HBox alignment="CENTER" prefHeight="55.0" prefWidth="350.0">
                <children>
                   <Button fx:id="spital" lineSpacing="10.0" mnemonicParsing="false" onAction="#buttonSpitalClick" prefHeight="30.0" prefWidth="121.0" text="Spital">
                      <HBox.margin>
-                        <Insets bottom="5.0" left="62.0" top="5.0" />
+                        <Insets left="5.0" top="5.0" />
                      </HBox.margin>
                      <graphic>
                         <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
@@ -82,18 +82,15 @@
                      </graphic>
                   </Button>
                </children>
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
                <VBox.margin>
-                  <Insets bottom="10.0" />
+                  <Insets left="5.0" top="5.0" />
                </VBox.margin>
             </HBox>
             <HBox alignment="CENTER" prefHeight="50.0" prefWidth="250.0">
                <children>
                   <Button fx:id="apotheke" lineSpacing="10.0" mnemonicParsing="false" onAction="#buttonApothekeClick" prefHeight="30.0" prefWidth="126.0" text="Apotheke">
                      <HBox.margin>
-                        <Insets bottom="5.0" left="60.0" top="5.0" />
+                        <Insets left="5.0" top="5.0" />
                      </HBox.margin>
                      <graphic>
                         <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
@@ -103,15 +100,15 @@
                      </graphic>
                   </Button>
                </children>
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
+               <VBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </VBox.margin>
             </HBox>
             <HBox alignment="CENTER" prefHeight="45.0" prefWidth="350.0">
                <children>
                   <Button fx:id="spezialist" lineSpacing="10.0" mnemonicParsing="false" onAction="#buttonSpezialistClick" prefHeight="30.0" prefWidth="126.0" text="Spezialist">
                      <HBox.margin>
-                        <Insets bottom="5.0" left="60.0" top="5.0" />
+                        <Insets left="5.0" top="5.0" />
                      </HBox.margin>
                      <graphic>
                         <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
@@ -120,23 +117,17 @@
                            </image>
                         </ImageView>
                      </graphic>
-                     <padding>
-                        <Insets bottom="10.0" left="40.0" right="40.0" />
-                     </padding>
                   </Button>
                </children>
-               <padding>
-                  <Insets bottom="5.0" />
-               </padding>
                <VBox.margin>
-                  <Insets bottom="5.0" />
+                  <Insets left="5.0" top="5.0" />
                </VBox.margin>
             </HBox>
             <HBox alignment="CENTER" prefHeight="55.0" prefWidth="350.0">
                <children>
                   <Button fx:id="reha" lineSpacing="10.0" mnemonicParsing="false" onAction="#buttonRehaClick" prefHeight="30.0" prefWidth="126.0" text="Reha">
                      <HBox.margin>
-                        <Insets bottom="5.0" left="60.0" top="5.0" />
+                        <Insets left="5.0" top="5.0" />
                      </HBox.margin>
                      <graphic>
                         <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
@@ -145,16 +136,10 @@
                            </image>
                         </ImageView>
                      </graphic>
-                     <padding>
-                        <Insets bottom="10.0" />
-                     </padding>
                   </Button>
                </children>
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
                <VBox.margin>
-                  <Insets bottom="5.0" />
+                  <Insets left="5.0" top="5.0" />
                </VBox.margin>
             </HBox>
          </children>
