@@ -59,7 +59,7 @@ public class KontaktePresenter {
 
 	    public void initialize() {
 	    	kontakt.setShowTransitionFactory(BounceInRightTransition::new);
-	    	 kontakt.showingProperty().addListener((obs, oldValue, newValue) -> {
+	    	kontakt.showingProperty().addListener((obs, oldValue, newValue) -> {
 	             if (newValue) {
 	                 AppBar appBar = MobileApplication.getInstance().getAppBar();
 	                 appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 

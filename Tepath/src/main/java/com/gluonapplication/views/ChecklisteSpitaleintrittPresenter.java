@@ -17,7 +17,7 @@ public class ChecklisteSpitaleintrittPresenter {
 
 
     public void initialize() {
-    	spitaleintritt.setShowTransitionFactory(BounceInRightTransition::new);
+     spitaleintritt.setShowTransitionFactory(BounceInRightTransition::new);
    	 spitaleintritt.showingProperty().addListener((obs, oldValue, newValue) -> {
             if (newValue) {
                 AppBar appBar = MobileApplication.getInstance().getAppBar();

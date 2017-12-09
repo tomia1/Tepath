@@ -30,8 +30,6 @@ public class ChecklistPresenter {
     void buttonRehaClick(ActionEvent event) {
     	vorReha.setOnAction(e -> 
         MobileApplication.getInstance().switchView(GluonApplication.CHECKLISTEREHAEINTRITT_VIEW));
-//--------
-
 
     }
 
@@ -46,6 +44,7 @@ public class ChecklistPresenter {
     void buttonSpitalClick(ActionEvent event) {
     	vorSpital.setOnAction(e -> 
         MobileApplication.getInstance().switchView(GluonApplication.CHECKLISTESPITALEINTRITT_VIEW));
+    	
 
     }
     
@@ -53,7 +52,7 @@ public class ChecklistPresenter {
 
     public void initialize() {
     	viewChecklist.setShowTransitionFactory(BounceInRightTransition::new);
-    	 viewChecklist.showingProperty().addListener((obs, oldValue, newValue) -> {
+        viewChecklist.showingProperty().addListener((obs, oldValue, newValue) -> {
              if (newValue) {
                  AppBar appBar = MobileApplication.getInstance().getAppBar();
                  appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 

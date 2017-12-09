@@ -17,15 +17,15 @@ public class ChecklisteSpezialistenbesuchPresenter {
 
 
     public void initialize() {
-    	spezialistenbesuch.setShowTransitionFactory(BounceInRightTransition::new);
+     spezialistenbesuch.setShowTransitionFactory(BounceInRightTransition::new);
    	 spezialistenbesuch.showingProperty().addListener((obs, oldValue, newValue) -> {
             if (newValue) {
                 AppBar appBar = MobileApplication.getInstance().getAppBar();
                 appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 
                         MobileApplication.getInstance().showLayer(GluonApplication.MENU_LAYER)));
                 appBar.setTitleText("Vor Spezialistenbesuch");
-                appBar.getActionItems().add(MaterialDesignIcon.SEARCH.button(e -> 
-                        System.out.println("Search")));
+                appBar.getActionItems().add(MaterialDesignIcon.FAVORITE.button(e -> 
+                        System.out.println("Favorite")));
             }
         });
     }
