@@ -11,10 +11,8 @@ import javafx.fxml.FXML;
 
 public class ChecklisteSpezialistenbesuchPresenter {
 	
-
     @FXML
     private View spezialistenbesuch;
-
 
     public void initialize() {
      spezialistenbesuch.setShowTransitionFactory(BounceInRightTransition::new);
