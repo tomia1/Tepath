@@ -14,7 +14,7 @@ public class ChecklisteSpezialistenbesuchView {
     
     public View getView() {
         try {
-            View view = FXMLLoader.load(ChecklisteSpezialistenbesuchView.class.getResource("checklisteSpezialisteintritt.fxml"));
+            View view = FXMLLoader.load(ChecklisteSpezialistenbesuchView.class.getResource("checklisteSpezialistenbesuch.fxml"));
             view.setName(name);
             return view;
         } catch (IOException e) {
