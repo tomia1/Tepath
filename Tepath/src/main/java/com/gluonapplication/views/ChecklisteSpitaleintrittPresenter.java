@@ -13,17 +13,17 @@ public class ChecklisteSpitaleintrittPresenter {
 	
 
     @FXML
-    private View spitaleintritt;
+    private View spezialisteintritt;
 
 
     public void initialize() {
-    	spitaleintritt.setShowTransitionFactory(BounceInRightTransition::new);
-   	 spitaleintritt.showingProperty().addListener((obs, oldValue, newValue) -> {
+    	spezialisteintritt.setShowTransitionFactory(BounceInRightTransition::new);
+   	 spezialisteintritt.showingProperty().addListener((obs, oldValue, newValue) -> {
             if (newValue) {
                 AppBar appBar = MobileApplication.getInstance().getAppBar();
                 appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 
                         MobileApplication.getInstance().showLayer(GluonApplication.MENU_LAYER)));
-                appBar.setTitleText("Vor Spitaleintritt");
+                appBar.setTitleText("Vor Spezialisteintritt");
                 appBar.getActionItems().add(MaterialDesignIcon.SEARCH.button(e -> 
                         System.out.println("Search")));
             }
