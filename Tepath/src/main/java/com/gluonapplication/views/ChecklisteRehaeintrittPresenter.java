@@ -17,13 +17,13 @@ public class ChecklisteRehaeintrittPresenter {
 
 
     public void initialize() {
-    	rehaeintritt.setShowTransitionFactory(BounceInRightTransition::new);
+     rehaeintritt.setShowTransitionFactory(BounceInRightTransition::new);
    	 rehaeintritt.showingProperty().addListener((obs, oldValue, newValue) -> {
             if (newValue) {
                 AppBar appBar = MobileApplication.getInstance().getAppBar();
                 appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 
                         MobileApplication.getInstance().showLayer(GluonApplication.MENU_LAYER)));
-                appBar.setTitleText("Vor rehaeintritt");
+                appBar.setTitleText("Vor Rehaeintritt");
                 appBar.getActionItems().add(MaterialDesignIcon.SEARCH.button(e -> 
                         System.out.println("Search")));
             }
