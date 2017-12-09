@@ -28,11 +28,17 @@ public class ChecklistPresenter {
 
     @FXML
     void buttonRehaClick(ActionEvent event) {
+    	vorSpital.setOnAction(e -> 
+        MobileApplication.getInstance().switchView(GluonApplication.CHECKLISTEREHAEINTRITT_VIEW));
+//--------
+
 
     }
 
     @FXML
     void buttonSpezialistClick(ActionEvent event) {
+    	vorSpital.setOnAction(e -> 
+        MobileApplication.getInstance().switchView(GluonApplication.CHECKLISTESPITALEINTRITT_VIEW));
 
     }
 
@@ -42,6 +48,7 @@ public class ChecklistPresenter {
         MobileApplication.getInstance().switchView(GluonApplication.CHECKLISTESPITALEINTRITT_VIEW));
 
     }
+    
 
 
     public void initialize() {
