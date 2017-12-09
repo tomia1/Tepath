@@ -4,17 +4,17 @@ import java.io.IOException;
 import com.gluonhq.charm.glisten.mvc.View;
 import javafx.fxml.FXMLLoader;
 
-public class ChecklisteSpezialisteintrittView {
+public class ChecklisteSpezialistenbesuchView {
 	
 	private final String name;
 
-    public ChecklisteSpezialisteintrittView(String name) {
+    public ChecklisteSpezialistenbesuchView(String name) {
         this.name = name;
     }
     
     public View getView() {
         try {
-            View view = FXMLLoader.load(ChecklisteSpezialisteintrittView.class.getResource("checklisteSpezialisteintritt.fxml"));
+            View view = FXMLLoader.load(ChecklisteSpezialistenbesuchView.class.getResource("checklisteSpezialisteintritt.fxml"));
             view.setName(name);
             return view;
         } catch (IOException e) {
