@@ -9,13 +9,16 @@ import com.gluonhq.charm.glisten.visual.MaterialDesignIcon;
 
 import javafx.fxml.FXML;
 
-public class ChecklisteRehaeintrittPresenter {
+public class ChecklisteRehaeintrittPresenter  {
 	
 
     @FXML
     private View rehaeintritt;
 
-
+//    protected void updateAppBar(AppBar appBar) {
+//        appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> switchView(SECONDARY_VIEW)));
+//        appBar.setTitleText("Vor Rehaeintritt");
+//    }
     public void initialize() {
      rehaeintritt.setShowTransitionFactory(BounceInRightTransition::new);
    	 rehaeintritt.showingProperty().addListener((obs, oldValue, newValue) -> {

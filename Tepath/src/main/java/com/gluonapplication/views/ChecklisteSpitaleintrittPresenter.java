@@ -26,6 +26,7 @@ public class ChecklisteSpitaleintrittPresenter {
                 appBar.setTitleText("Vor Spitaleintritt");
                 appBar.getActionItems().add(MaterialDesignIcon.SEARCH.button(e -> 
                         System.out.println("Search")));
+                
             }
         });
     }

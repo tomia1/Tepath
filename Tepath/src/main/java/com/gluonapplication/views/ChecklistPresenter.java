@@ -10,6 +10,7 @@ import com.gluonhq.charm.glisten.visual.MaterialDesignIcon;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.MenuItem;
 
 public class ChecklistPresenter {
 	
@@ -25,12 +26,14 @@ public class ChecklistPresenter {
 
     @FXML
     private Button vorReha;
-
+    
+   
     @FXML
     void buttonRehaClick(ActionEvent event) {
     	vorReha.setOnAction(e -> 
         MobileApplication.getInstance().switchView(GluonApplication.CHECKLISTEREHAEINTRITT_VIEW));
-
+      	
+    	
     }
 
     @FXML
@@ -48,9 +51,8 @@ public class ChecklistPresenter {
 
     }
     
-
-
-    public void initialize() {
+   
+public void initialize() {
     	viewChecklist.setShowTransitionFactory(BounceInRightTransition::new);
         viewChecklist.showingProperty().addListener((obs, oldValue, newValue) -> {
              if (newValue) {
