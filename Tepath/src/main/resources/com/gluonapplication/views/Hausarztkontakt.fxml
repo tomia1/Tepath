@@ -148,12 +148,12 @@
    <bottom>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" onAction="#ButtonZurückKlick" text="Zurück">
+            <Button mnemonicParsing="false" text="Zurück">
                <HBox.margin>
                   <Insets left="30.0" right="80.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#ButtonSendenClick" text="Senden">
+            <Button mnemonicParsing="false" text="Senden">
                <HBox.margin>
                   <Insets left="40.0" />
                </HBox.margin>

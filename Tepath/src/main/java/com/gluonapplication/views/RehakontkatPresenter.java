@@ -7,17 +7,26 @@ import com.gluonhq.charm.glisten.control.AppBar;
 import com.gluonhq.charm.glisten.mvc.View;
 import com.gluonhq.charm.glisten.visual.MaterialDesignIcon;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 
 public class RehakontkatPresenter  {
 	
 
     @FXML
     private View rehakontakt;
+    @FXML
+    private Button mybutton;
 
 //    protected void updateAppBar(AppBar appBar) {
 //        appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> switchView(SECONDARY_VIEW)));
 //        appBar.setTitleText("Vor Rehaeintritt");
+//    @FXML
+//    void mybuttonClick(ActionEvent event) {
+//    	rahakontakt.setOnAction(e -> 
+//        MobileApplication.getInstance().switchView(GluonApplication.KONTAKTE_VIEW));
+//    }
 //    }
     public void initialize() {
     	rehakontakt.setShowTransitionFactory(BounceInRightTransition::new);
