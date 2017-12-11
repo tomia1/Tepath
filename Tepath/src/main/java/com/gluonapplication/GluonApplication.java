@@ -24,14 +24,14 @@ public class GluonApplication extends MobileApplication {
 	public static final String CHECKLIST_VIEW = "Checklisten"; // die Sicht mit den Checklisten
 	public static final String KONTAKTE_VIEW = "Kontakte"; // Konatkpersonen
 	public static final String GESUNDHEITSZUSTAND_VIEW = "Gesundheitszustand"; // Gesundheitszustand des Patientin
-	public static final String CHECKLISTESPITALEINTRITT_VIEW = "Spitaleintritt";
-	public static final String CHECKLISTESPEZIALISTENBESUCH_VIEW = "Spezialistenbesuch";
-	public static final String CHECKLISTEREHAEINTRITT_VIEW = "Rehaeintritt";
-	public static final String HAUSARZTKONTAKT_VIEW = "Hausarztkontakt";
-	public static final String SPITALKONTAKT_VIEW = "Spitalkontakt";
-	public static final String APOTHEKEKONTAKT_VIEW = "Apothekekontakt";
-	public static final String REHAKONTAKT_VIEW = "Rehakontakt";
-	public static final String SPEZIALISTKONTAKT_VIEW = "Spezialistkontakt";
+	public static final String CHECKLISTESPITALEINTRITT_VIEW = "Spitaleintritt";// Checkliste vor Spitaleintritt
+	public static final String CHECKLISTESPEZIALISTENBESUCH_VIEW = "Spezialistenbesuch";// Chekliste vor Speizalistenbesuch
+	public static final String CHECKLISTEREHAEINTRITT_VIEW = "Rehaeintritt";// Checkliste vor Rehaeintritt
+	public static final String HAUSARZTKONTAKT_VIEW = "Hausarztkontakt";// Kontakt _Hausazrt
+	public static final String SPITALKONTAKT_VIEW = "Spitalkontakt";// Kontakt_Spital
+	public static final String APOTHEKEKONTAKT_VIEW = "Apothekekontakt";// Kontakt_Apotheke
+	public static final String REHAKONTAKT_VIEW = "Rehakontakt";// Kontakt_Reha
+	public static final String SPEZIALISTKONTAKT_VIEW = "Spezialistkontakt";//Kontakt_Spezialist
     @Override
     public void init() {
     	
