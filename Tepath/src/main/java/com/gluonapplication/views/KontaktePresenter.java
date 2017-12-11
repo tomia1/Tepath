@@ -39,7 +39,8 @@ public class KontaktePresenter {
 
 	    @FXML
 	    void buttonHausarztClick(ActionEvent event) {
-
+	    	hausarzt.setOnAction(e -> 
+	        MobileApplication.getInstance().switchView(GluonApplication.HAUSARZTKONTAKT_VIEW));
 	    }
 
 	    @FXML
