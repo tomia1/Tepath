@@ -29,6 +29,9 @@ public class GluonApplication extends MobileApplication {
 	public static final String CHECKLISTEREHAEINTRITT_VIEW = "Rehaeintritt";
 	public static final String HAUSARZTKONTAKT_VIEW = "Hausarztkontakt";
 	public static final String SPITALKONTAKT_VIEW = "Spitalkontakt";
+	public static final String APOTHEKEKONTAKT_VIEW = "Apothekekontakt";
+	public static final String REHAKONTAKT_VIEW = "Rehakontakt";
+	public static final String SPEZIALISTKONTAKT_VIEW = "Spezialistkontakt";
     @Override
     public void init() {
     	
@@ -45,6 +48,9 @@ public class GluonApplication extends MobileApplication {
         addViewFactory(CHECKLISTEREHAEINTRITT_VIEW, () -> new ChecklisteRehaeintrittView(CHECKLISTEREHAEINTRITT_VIEW).getView());
         addViewFactory(HAUSARZTKONTAKT_VIEW, () -> new HausarztkontaktView(HAUSARZTKONTAKT_VIEW).getView());
         addViewFactory(SPITALKONTAKT_VIEW, () -> new SpitalkontaktView(SPITALKONTAKT_VIEW).getView());
+        addViewFactory(APOTHEKEKONTAKT_VIEW, () -> new SpitalkontaktView(APOTHEKEKONTAKT_VIEW).getView());
+        addViewFactory(REHAKONTAKT_VIEW, () -> new SpitalkontaktView(REHAKONTAKT_VIEW).getView());
+        addViewFactory(SPEZIALISTKONTAKT_VIEW, () -> new SpitalkontaktView(SPEZIALISTKONTAKT_VIEW).getView());
         addLayerFactory(MENU_LAYER, () -> new SidePopupView(new DrawerManager().getDrawer()));
     }
 

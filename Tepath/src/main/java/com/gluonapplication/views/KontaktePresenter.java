@@ -34,7 +34,8 @@ public class KontaktePresenter {
 
 	    @FXML
 	    void buttonApothekeClick(ActionEvent event) {
-
+	    	apotheke.setOnAction(e -> 
+	        MobileApplication.getInstance().switchView(GluonApplication.APOTHEKEKONTAKT_VIEW));
 	    }
 
 	    @FXML
@@ -45,12 +46,14 @@ public class KontaktePresenter {
 
 	    @FXML
 	    void buttonRehaClick(ActionEvent event) {
-
+	    	reha.setOnAction(e -> 
+	        MobileApplication.getInstance().switchView(GluonApplication.REHAKONTAKT_VIEW));
 	    }
 
 	    @FXML
 	    void buttonSpezialistClick(ActionEvent event) {
-
+	    	spezialist.setOnAction(e -> 
+	        MobileApplication.getInstance().switchView(GluonApplication.SPEZIALISTKONTAKT_VIEW));
 	    }
 
 	    @FXML
