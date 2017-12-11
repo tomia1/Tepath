@@ -1,8 +1,10 @@
 package com.gluonapplication;
 
 import com.gluonapplication.views.ChecklistView;
+import com.gluonapplication.views.ChecklisteRehaeintrittView;
 import com.gluonapplication.views.ChecklisteSpitaleintrittView;
 import com.gluonapplication.views.GesundheitszustandView;
+import com.gluonapplication.views.HausarztkontaktView;
 import com.gluonapplication.views.KontakteView;
 import com.gluonapplication.views.PrimaryView;
 import com.gluonapplication.views.SecondaryView;
@@ -24,7 +26,7 @@ public class GluonApplication extends MobileApplication {
 	public static final String CHECKLISTESPITALEINTRITT_VIEW = "Spitaleintritt";
 	public static final String CHECKLISTESPEZIALISTENBESUCH_VIEW = "Spezialistenbesuch";
 	public static final String CHECKLISTEREHAEINTRITT_VIEW = "Rehaeintritt";
-    
+	public static final String HAUSARZTKONTAKT_VIEW = "Hausarztkontakt";
     @Override
     public void init() {
     	
@@ -38,7 +40,8 @@ public class GluonApplication extends MobileApplication {
         addViewFactory(GESUNDHEITSZUSTAND_VIEW, () -> new GesundheitszustandView(GESUNDHEITSZUSTAND_VIEW).getView());
         addViewFactory(CHECKLISTESPITALEINTRITT_VIEW, () -> new ChecklisteSpitaleintrittView(CHECKLISTESPITALEINTRITT_VIEW).getView());
         addViewFactory(CHECKLISTESPEZIALISTENBESUCH_VIEW, () -> new ChecklisteSpitaleintrittView(CHECKLISTESPEZIALISTENBESUCH_VIEW).getView());
-        addViewFactory(CHECKLISTEREHAEINTRITT_VIEW, () -> new ChecklisteSpitaleintrittView(CHECKLISTEREHAEINTRITT_VIEW).getView());
+        addViewFactory(CHECKLISTEREHAEINTRITT_VIEW, () -> new ChecklisteRehaeintrittView(CHECKLISTEREHAEINTRITT_VIEW).getView());
+        addViewFactory(HAUSARZTKONTAKT_VIEW, () -> new HausarztkontaktView(HAUSARZTKONTAKT_VIEW).getView());
         
         addLayerFactory(MENU_LAYER, () -> new SidePopupView(new DrawerManager().getDrawer()));
     }

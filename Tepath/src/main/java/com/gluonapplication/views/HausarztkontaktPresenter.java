@@ -9,7 +9,7 @@ import com.gluonhq.charm.glisten.visual.MaterialDesignIcon;
 
 import javafx.fxml.FXML;
 
-public class HausarztPresenter  {
+public class HausarztkontaktPresenter  {
 	
 
     @FXML
