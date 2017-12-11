@@ -1,5 +1,6 @@
 package com.gluonapplication;
 
+import com.gluonapplication.views.ApothekekontaktView;
 import com.gluonapplication.views.ChecklistView;
 import com.gluonapplication.views.ChecklisteRehaeintrittView;
 import com.gluonapplication.views.ChecklisteSpitaleintrittView;
@@ -7,6 +8,8 @@ import com.gluonapplication.views.GesundheitszustandView;
 import com.gluonapplication.views.HausarztkontaktView;
 import com.gluonapplication.views.KontakteView;
 import com.gluonapplication.views.PrimaryView;
+import com.gluonapplication.views.RehakontaktView;
+import com.gluonapplication.views.SpezialistkontaktView;
 import com.gluonapplication.views.SecondaryView;
 import com.gluonapplication.views.SpitalkontaktView;
 import com.gluonhq.charm.glisten.application.MobileApplication;
@@ -48,9 +51,9 @@ public class GluonApplication extends MobileApplication {
         addViewFactory(CHECKLISTEREHAEINTRITT_VIEW, () -> new ChecklisteRehaeintrittView(CHECKLISTEREHAEINTRITT_VIEW).getView());
         addViewFactory(HAUSARZTKONTAKT_VIEW, () -> new HausarztkontaktView(HAUSARZTKONTAKT_VIEW).getView());
         addViewFactory(SPITALKONTAKT_VIEW, () -> new SpitalkontaktView(SPITALKONTAKT_VIEW).getView());
-        addViewFactory(APOTHEKEKONTAKT_VIEW, () -> new SpitalkontaktView(APOTHEKEKONTAKT_VIEW).getView());
-        addViewFactory(REHAKONTAKT_VIEW, () -> new SpitalkontaktView(REHAKONTAKT_VIEW).getView());
-        addViewFactory(SPEZIALISTKONTAKT_VIEW, () -> new SpitalkontaktView(SPEZIALISTKONTAKT_VIEW).getView());
+        addViewFactory(APOTHEKEKONTAKT_VIEW, () -> new ApothekekontaktView(APOTHEKEKONTAKT_VIEW).getView());
+        addViewFactory(REHAKONTAKT_VIEW, () -> new RehakontaktView(REHAKONTAKT_VIEW).getView());
+        addViewFactory(SPEZIALISTKONTAKT_VIEW, () -> new SpezialistkontaktView(SPEZIALISTKONTAKT_VIEW).getView());
         addLayerFactory(MENU_LAYER, () -> new SidePopupView(new DrawerManager().getDrawer()));
     }
 
