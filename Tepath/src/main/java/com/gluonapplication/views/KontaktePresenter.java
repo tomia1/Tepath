@@ -55,7 +55,8 @@ public class KontaktePresenter {
 
 	    @FXML
 	    void buttonSpitalClick(ActionEvent event) {
-
+	    	spital.setOnAction(e -> 
+	        MobileApplication.getInstance().switchView(GluonApplication.SPITALKONTAKT_VIEW));
 	    }
 
 	    public void initialize() {
