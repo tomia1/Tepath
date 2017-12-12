@@ -24,7 +24,7 @@ public class SecondaryPresenter {
             if (newValue) {
                 AppBar appBar = MobileApplication.getInstance().getAppBar();
                 appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 
-                        MobileApplication.getInstance().showLayer(GluonApplication.MENU_LAYER)));
+                 MobileApplication.getInstance().showLayer(GluonApplication.MENU_LAYER)));
                 appBar.setTitleText("Ablauf");
                 
             }
