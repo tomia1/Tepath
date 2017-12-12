@@ -10,7 +10,6 @@ import com.gluonhq.charm.glisten.visual.MaterialDesignIcon;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.MenuItem;
 
 public class ChecklistPresenter {
 	
@@ -60,8 +59,8 @@ public void initialize() {
                  appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 
                          MobileApplication.getInstance().showLayer(GluonApplication.MENU_LAYER)));
                  appBar.setTitleText("Checklisten");
-                 appBar.getActionItems().add(MaterialDesignIcon.SEARCH.button(e -> 
-                         System.out.println("Search")));
+                 appBar.getActionItems().add(MaterialDesignIcon.ARROW_BACK.button(e -> 
+                 MobileApplication.getInstance().switchToPreviousView()));
              }
          });
     }

@@ -27,8 +27,8 @@ public class ApothekekontaktPresenter  {
                 appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 
                         MobileApplication.getInstance().showLayer(GluonApplication.MENU_LAYER)));
                 appBar.setTitleText("Apothekekontakt");
-                appBar.getActionItems().add(MaterialDesignIcon.SEARCH.button(e -> 
-                        System.out.println("Search")));
+                appBar.getActionItems().add(MaterialDesignIcon.ARROW_BACK.button(e -> 
+                MobileApplication.getInstance().switchToPreviousView()));
             }
         });
     }
