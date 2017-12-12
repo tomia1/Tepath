@@ -33,6 +33,7 @@
 -->
 
 <?import com.gluonhq.charm.glisten.mvc.View?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -45,7 +46,7 @@
       <HBox prefHeight="48.0" prefWidth="350.0" BorderPane.alignment="CENTER" />
    </top>
    <center>
-      <VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="350.0" spacing="20.0" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="350.0" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
             <Button fx:id="hausarzt" graphicTextGap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buttonHausarztClick" prefHeight="60.0" prefWidth="220.0" style="-fx-font-size: 20; -fx-alignment: left;" text="Hausarzt">
                <graphic>
@@ -93,6 +94,12 @@
                </graphic>
             </Button>
          </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets top="40.0" />
+         </padding>
       </VBox>
    </center>
 </View>
