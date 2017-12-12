@@ -33,7 +33,6 @@
 -->
 
 <?import com.gluonhq.charm.glisten.mvc.View?>
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -41,107 +40,58 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<View fx:id="kontakt" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" stylesheets="@kontakte.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gluonapplication.views.KontaktePresenter">
+<View fx:id="kontakt" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" stylesheets="@kontakte.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gluonapplication.views.KontaktePresenter">
    <top>
       <HBox prefHeight="48.0" prefWidth="350.0" BorderPane.alignment="CENTER" />
    </top>
    <center>
-      <VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="350.0" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="CENTER" prefHeight="44.0" prefWidth="346.0">
-               <children>
-                  <Button fx:id="hausarzt" lineSpacing="10.0" mnemonicParsing="false" onAction="#buttonHausarztClick" prefHeight="30.0" prefWidth="126.0" text="Hausarzt">
-                     <HBox.margin>
-                        <Insets left="5.0" top="5.0" />
-                     </HBox.margin>
-                     <graphic>
-                        <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Hausarzt.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-               <VBox.margin>
-                  <Insets left="5.0" top="5.0" />
-               </VBox.margin>
-            </HBox>
-            <HBox alignment="CENTER" prefHeight="55.0" prefWidth="350.0">
-               <children>
-                  <Button fx:id="spital" lineSpacing="10.0" mnemonicParsing="false" onAction="#buttonSpitalClick" prefHeight="30.0" prefWidth="121.0" text="Spital">
-                     <HBox.margin>
-                        <Insets left="5.0" top="5.0" />
-                     </HBox.margin>
-                     <graphic>
-                        <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Spital.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-               <VBox.margin>
-                  <Insets left="5.0" top="5.0" />
-               </VBox.margin>
-            </HBox>
-            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="250.0">
-               <children>
-                  <Button fx:id="apotheke" lineSpacing="10.0" mnemonicParsing="false" onAction="#buttonApothekeClick" prefHeight="30.0" prefWidth="126.0" text="Apotheke">
-                     <HBox.margin>
-                        <Insets left="5.0" top="5.0" />
-                     </HBox.margin>
-                     <graphic>
-                        <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Apotheke%20(1).png" />
-                           </image></ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-               <VBox.margin>
-                  <Insets left="5.0" top="5.0" />
-               </VBox.margin>
-            </HBox>
-            <HBox alignment="CENTER" prefHeight="45.0" prefWidth="350.0">
-               <children>
-                  <Button fx:id="spezialist" lineSpacing="10.0" mnemonicParsing="false" onAction="#buttonSpezialistClick" prefHeight="30.0" prefWidth="126.0" text="Spezialist">
-                     <HBox.margin>
-                        <Insets left="5.0" top="5.0" />
-                     </HBox.margin>
-                     <graphic>
-                        <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Spezialist.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-               <VBox.margin>
-                  <Insets left="5.0" top="5.0" />
-               </VBox.margin>
-            </HBox>
-            <HBox alignment="CENTER" prefHeight="55.0" prefWidth="350.0">
-               <children>
-                  <Button fx:id="reha" lineSpacing="10.0" mnemonicParsing="false" onAction="#buttonRehaClick" prefHeight="30.0" prefWidth="126.0" text="Reha">
-                     <HBox.margin>
-                        <Insets left="5.0" top="5.0" />
-                     </HBox.margin>
-                     <graphic>
-                        <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../Reha.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-               <VBox.margin>
-                  <Insets left="5.0" top="5.0" />
-               </VBox.margin>
-            </HBox>
+            <Button fx:id="hausarzt" graphicTextGap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buttonHausarztClick" prefHeight="60.0" prefWidth="220.0" style="-fx-font-size: 20; -fx-alignment: left;" text="Hausarzt">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Hausarzt.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="spital" graphicTextGap="10.0" lineSpacing="20.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buttonSpitalClick" prefHeight="60.0" prefWidth="220.0" style="-fx-font-size: 20; -fx-alignment: left;" text="Spital">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Spital.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="apotheke" graphicTextGap="10.0" lineSpacing="20.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buttonApothekeClick" prefHeight="60.0" prefWidth="220.0" style="-fx-font-size: 20; -fx-alignment: left;" text="Apotheke">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Apotheke%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="spezialist" graphicTextGap="10.0" lineSpacing="20.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buttonSpezialistClick" prefHeight="60.0" prefWidth="220.0" style="-fx-font-size: 20; -fx-alignment: left;" text="Spezialist">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Spezialist.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="reha" graphicTextGap="10.0" lineSpacing="20.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buttonRehaClick" prefHeight="60.0" prefWidth="220.0" style="-fx-font-size: 20; -fx-alignment: left;" text="Reha">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Reha.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </VBox>
    </center>

@@ -38,8 +38,9 @@ public class GluonApplication extends MobileApplication {
     @Override
     public void init() {
     	
-    	 //Hier werden die verschiedenen Sichten der Applikation erstellt.
-    	 //Das Menü wird auch hier erstellt. Das Menü wird auf der linken Seite eingeblendet.
+//    	 Hier werden die verschiedenen Sichten der Applikation erstellt.
+//    	 Das Menü wird auch hier erstellt. Das Menü wird auf der linken Seite eingeblendet.
+    	 
     	 
     	addViewFactory(PRIMARY_VIEW, () -> new PrimaryView(PRIMARY_VIEW).getView());
         addViewFactory(SECONDARY_VIEW, () -> new SecondaryView(SECONDARY_VIEW).getView());
