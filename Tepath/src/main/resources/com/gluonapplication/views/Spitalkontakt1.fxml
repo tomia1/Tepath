@@ -42,7 +42,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
 <View maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <VBox prefHeight="568.0" prefWidth="335.0" BorderPane.alignment="CENTER">
@@ -59,7 +58,7 @@
                         <Insets left="50.0" />
                      </padding>
                      <HBox.margin>
-                        <Insets bottom="10.0" />
+                        <Insets bottom="10.0" left="5.0" right="5.0" />
                      </HBox.margin>
                   </Label>
                </children>
@@ -75,6 +74,9 @@
                      <padding>
                         <Insets left="50.0" />
                      </padding>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
                   </Label>
                </children>
             </HBox>
@@ -82,7 +84,7 @@
                <children>
                   <Label text="Telefon :">
                      <HBox.margin>
-                        <Insets left="10.0" />
+                        <Insets left="5.0" />
                      </HBox.margin>
                   </Label>
                   <Label text="032 324 24 24">
@@ -91,6 +93,9 @@
                      </HBox.margin>
                   </Label>
                </children>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
             </HBox>
             <HBox prefHeight="44.0" prefWidth="335.0">
                <children>
@@ -100,6 +105,9 @@
                      </padding>
                   </Label>
                </children>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
             </HBox>
             <HBox prefHeight="28.0" prefWidth="335.0">
                <children>
@@ -123,6 +131,9 @@
                      </HBox.margin>
                   </Label>
                </children>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
@@ -141,6 +152,9 @@
                      </padding>
                   </Button>
                </children>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
             </HBox>
          </children>
          <padding>
