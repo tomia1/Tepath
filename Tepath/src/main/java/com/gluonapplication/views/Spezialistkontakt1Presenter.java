@@ -8,33 +8,25 @@ import com.gluonhq.charm.glisten.mvc.View;
 import com.gluonhq.charm.glisten.visual.MaterialDesignIcon;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 
-public class RehakontaktPresenter  {
+public class Spezialistkontakt1Presenter  {
 	
 
     @FXML
-    private View rehakontakt;
-    @FXML
-    private Button mybutton;
+    private View spezialistkontakt1;
 
 //    protected void updateAppBar(AppBar appBar) {
 //        appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> switchView(SECONDARY_VIEW)));
 //        appBar.setTitleText("Vor Rehaeintritt");
-//    @FXML
-//    void mybuttonClick(ActionEvent event) {
-//    	rahakontakt.setOnAction(e -> 
-//        MobileApplication.getInstance().switchView(GluonApplication.KONTAKTE_VIEW));
-//    }
 //    }
     public void initialize() {
-    	rehakontakt.setShowTransitionFactory(BounceInRightTransition::new);
-    	rehakontakt.showingProperty().addListener((obs, oldValue, newValue) -> {
+    	spezialistkontakt1.setShowTransitionFactory(BounceInRightTransition::new);
+    	spezialistkontakt1.showingProperty().addListener((obs, oldValue, newValue) -> {
             if (newValue) {
                 AppBar appBar = MobileApplication.getInstance().getAppBar();
                 appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 
                         MobileApplication.getInstance().showLayer(GluonApplication.MENU_LAYER)));
-                appBar.setTitleText("Rehakontakt");
+                appBar.setTitleText("Spezialistkontakt");
                 appBar.getActionItems().add(MaterialDesignIcon.ARROW_BACK.button(e -> 
                 MobileApplication.getInstance().switchToPreviousView()));
             }

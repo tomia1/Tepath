@@ -4,17 +4,17 @@ import java.io.IOException;
 import com.gluonhq.charm.glisten.mvc.View;
 import javafx.fxml.FXMLLoader;
 
-public class SpitalkontaktView {
+public class Spezialistkontakt1View {
 	
 	private final String name;
 
-    public SpitalkontaktView(String name) {
+    public Spezialistkontakt1View(String name) {
         this.name = name;
     }
     
     public View getView() {
         try {
-            View view = FXMLLoader.load(SpitalkontaktView.class.getResource("Spitalkontakt.fxml"));
+            View view = FXMLLoader.load(Spezialistkontakt1View.class.getResource("Spezialistkontakt1.fxml"));
             view.setName(name);
             return view;
         } catch (IOException e) {

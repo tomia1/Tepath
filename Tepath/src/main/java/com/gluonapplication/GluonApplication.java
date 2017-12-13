@@ -1,16 +1,21 @@
 package com.gluonapplication;
 
+import com.gluonapplication.views.Apothekekontakt1View;
 import com.gluonapplication.views.ApothekekontaktView;
 import com.gluonapplication.views.ChecklistView;
 import com.gluonapplication.views.ChecklisteRehaeintrittView;
 import com.gluonapplication.views.ChecklisteSpitaleintrittView;
 import com.gluonapplication.views.GesundheitszustandView;
+import com.gluonapplication.views.Hausarztkontakt1View;
 import com.gluonapplication.views.HausarztkontaktView;
 import com.gluonapplication.views.KontakteView;
 import com.gluonapplication.views.PrimaryView;
+import com.gluonapplication.views.Rehakontakt1View;
 import com.gluonapplication.views.RehakontaktView;
 import com.gluonapplication.views.SpezialistkontaktView;
+import com.gluonapplication.views.Spitalkontakt1View;
 import com.gluonapplication.views.SecondaryView;
+import com.gluonapplication.views.Spezialistkontakt1View;
 import com.gluonapplication.views.SpitalkontaktView;
 import com.gluonhq.charm.glisten.application.MobileApplication;
 import com.gluonhq.charm.glisten.layout.layer.SidePopupView;
@@ -30,11 +35,11 @@ public class GluonApplication extends MobileApplication {
 	public static final String CHECKLISTESPITALEINTRITT_VIEW = "Spitaleintritt";// Checkliste vor Spitaleintritt
 	public static final String CHECKLISTESPEZIALISTENBESUCH_VIEW = "Spezialistenbesuch";// Chekliste vor Speizalistenbesuch
 	public static final String CHECKLISTEREHAEINTRITT_VIEW = "Rehaeintritt";// Checkliste vor Rehaeintritt
-	public static final String HAUSARZTKONTAKT_VIEW = "Hausarztkontakt";// Kontakt _Hausazrt
-	public static final String SPITALKONTAKT_VIEW = "Spitalkontakt";// Kontakt_Spital
-	public static final String APOTHEKEKONTAKT_VIEW = "Apothekekontakt";// Kontakt_Apotheke
-	public static final String REHAKONTAKT_VIEW = "Rehakontakt";// Kontakt_Reha
-	public static final String SPEZIALISTKONTAKT_VIEW = "Spezialistkontakt";//Kontakt_Spezialist
+	public static final String HAUSARZTKONTAKT1_VIEW = "Hausarztkontakt1";// Kontakt _Hausazrt
+	public static final String SPITALKONTAKT1_VIEW = "Spitalkontakt1";// Kontakt_Spital
+	public static final String APOTHEKEKONTAKT1_VIEW = "Apothekekontakt1";// Kontakt_Apotheke
+	public static final String REHAKONTAKT1_VIEW = "Rehakontakt1";// Kontakt_Reha
+	public static final String SPEZIALISTKONTAKT1_VIEW = "Spezialistkontakt1";//Kontakt_Spezialist
     @Override
     public void init() {
     	
@@ -50,11 +55,11 @@ public class GluonApplication extends MobileApplication {
         addViewFactory(CHECKLISTESPITALEINTRITT_VIEW, () -> new ChecklisteSpitaleintrittView(CHECKLISTESPITALEINTRITT_VIEW).getView());
         addViewFactory(CHECKLISTESPEZIALISTENBESUCH_VIEW, () -> new ChecklisteSpitaleintrittView(CHECKLISTESPEZIALISTENBESUCH_VIEW).getView());
         addViewFactory(CHECKLISTEREHAEINTRITT_VIEW, () -> new ChecklisteRehaeintrittView(CHECKLISTEREHAEINTRITT_VIEW).getView());
-        addViewFactory(HAUSARZTKONTAKT_VIEW, () -> new HausarztkontaktView(HAUSARZTKONTAKT_VIEW).getView());
-        addViewFactory(SPITALKONTAKT_VIEW, () -> new SpitalkontaktView(SPITALKONTAKT_VIEW).getView());
-        addViewFactory(APOTHEKEKONTAKT_VIEW, () -> new ApothekekontaktView(APOTHEKEKONTAKT_VIEW).getView());
-        addViewFactory(REHAKONTAKT_VIEW, () -> new RehakontaktView(REHAKONTAKT_VIEW).getView());
-        addViewFactory(SPEZIALISTKONTAKT_VIEW, () -> new SpezialistkontaktView(SPEZIALISTKONTAKT_VIEW).getView());
+        addViewFactory(HAUSARZTKONTAKT1_VIEW, () -> new Hausarztkontakt1View(HAUSARZTKONTAKT1_VIEW).getView());
+        addViewFactory(SPITALKONTAKT1_VIEW, () -> new Spitalkontakt1View(SPITALKONTAKT1_VIEW).getView());
+        addViewFactory(APOTHEKEKONTAKT1_VIEW, () -> new Apothekekontakt1View(APOTHEKEKONTAKT1_VIEW).getView());
+        addViewFactory(REHAKONTAKT1_VIEW, () -> new Rehakontakt1View(REHAKONTAKT1_VIEW).getView());
+        addViewFactory(SPEZIALISTKONTAKT1_VIEW, () -> new Spezialistkontakt1View(SPEZIALISTKONTAKT1_VIEW).getView());
         addLayerFactory(MENU_LAYER, () -> new SidePopupView(new DrawerManager().getDrawer()));
     }
 

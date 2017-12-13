@@ -9,16 +9,16 @@ import com.gluonhq.charm.glisten.visual.MaterialDesignIcon;
 
 import javafx.fxml.FXML;
 
-public class HausarztkontaktPresenter  {
+public class Hausarztkontakt1Presenter  {
 	
 
     @FXML
-    private View hausarztkontakt;
+    private View hausarztkontakt1;
 
 
     public void initialize() {
-    	hausarztkontakt.setShowTransitionFactory(BounceInRightTransition::new);
-    	hausarztkontakt.showingProperty().addListener((obs, oldValue, newValue) -> {
+    	hausarztkontakt1.setShowTransitionFactory(BounceInRightTransition::new);
+    	hausarztkontakt1.showingProperty().addListener((obs, oldValue, newValue) -> {
             if (newValue) {
                 AppBar appBar = MobileApplication.getInstance().getAppBar();
                 appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 
