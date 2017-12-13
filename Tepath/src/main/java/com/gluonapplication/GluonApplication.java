@@ -1,22 +1,22 @@
 package com.gluonapplication;
 
 import com.gluonapplication.views.Apothekekontakt1View;
-import com.gluonapplication.views.ApothekekontaktView;
+import com.gluonapplication.views.Apothekekontakt1View;
 import com.gluonapplication.views.ChecklistView;
 import com.gluonapplication.views.ChecklisteRehaeintrittView;
 import com.gluonapplication.views.ChecklisteSpitaleintrittView;
 import com.gluonapplication.views.GesundheitszustandView;
 import com.gluonapplication.views.Hausarztkontakt1View;
-import com.gluonapplication.views.HausarztkontaktView;
+import com.gluonapplication.views.Hausarztkontakt1View;
 import com.gluonapplication.views.KontakteView;
 import com.gluonapplication.views.PrimaryView;
 import com.gluonapplication.views.Rehakontakt1View;
-import com.gluonapplication.views.RehakontaktView;
-import com.gluonapplication.views.SpezialistkontaktView;
+import com.gluonapplication.views.Rehakontakt1View;
+import com.gluonapplication.views.Spezialistkontakt1View;
 import com.gluonapplication.views.Spitalkontakt1View;
 import com.gluonapplication.views.SecondaryView;
 import com.gluonapplication.views.Spezialistkontakt1View;
-import com.gluonapplication.views.SpitalkontaktView;
+import com.gluonapplication.views.Spitalkontakt1View;
 import com.gluonhq.charm.glisten.application.MobileApplication;
 import com.gluonhq.charm.glisten.layout.layer.SidePopupView;
 import com.gluonhq.charm.glisten.visual.Swatch;
