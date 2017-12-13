@@ -42,7 +42,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
 <View maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <VBox prefHeight="568.0" prefWidth="335.0" BorderPane.alignment="CENTER">
@@ -115,7 +114,7 @@
                   </TextField>
                </children>
             </HBox>
-            <HBox fx:id="nachricht" prefHeight="26.0" prefWidth="335.0">
+            <HBox fx:id="nachricht" prefHeight="26.0" prefWidth="284.0">
                <children>
                   <Label text="Nachricht :">
                      <HBox.margin>
@@ -123,13 +122,16 @@
                      </HBox.margin>
                   </Label>
                </children>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
                   <TextField fx:id="senden" prefHeight="100.0" prefWidth="333.0" />
                </children>
             </HBox>
-            <HBox prefHeight="62.0" prefWidth="335.0">
+            <HBox prefHeight="62.0" prefWidth="322.0">
                <children>
                   <JFXDrawer />
                   <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="61.0" text="Senden">
@@ -141,6 +143,9 @@
                      </padding>
                   </Button>
                </children>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
             </HBox>
          </children>
          <padding>
