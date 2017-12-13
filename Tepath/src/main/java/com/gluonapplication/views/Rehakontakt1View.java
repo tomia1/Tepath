@@ -14,7 +14,7 @@ public class Rehakontakt1View {
     
     public View getView() {
         try {
-            View view = FXMLLoader.load(Rehakontakt1View.class.getResource("Rehakontakt1.fxml"));
+            View view = FXMLLoader.load(Rehakontakt1View.class.getResource("rehakontakt1.fxml"));
             view.setName(name);
             return view;
         } catch (IOException e) {

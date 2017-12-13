@@ -14,7 +14,7 @@ public class Hausarztkontakt1View {
     
     public View getView() {
         try {
-            View view = FXMLLoader.load(Hausarztkontakt1View.class.getResource("Hausarztkontakt1.fxml"));
+            View view = FXMLLoader.load(Hausarztkontakt1View.class.getResource("hausarztkontakt1.fxml"));
             view.setName(name);
             return view;
         } catch (IOException e) {
