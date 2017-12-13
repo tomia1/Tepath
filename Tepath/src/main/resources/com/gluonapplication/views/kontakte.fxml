@@ -38,13 +38,10 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<View fx:id="kontakt" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" stylesheets="@kontakte.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gluonapplication.views.KontaktePresenter">
-   <top>
-      <HBox prefHeight="48.0" prefWidth="350.0" BorderPane.alignment="CENTER" />
-   </top>
+
+<View maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <VBox alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="350.0" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
@@ -95,10 +92,10 @@
             </Button>
          </children>
          <opaqueInsets>
-            <Insets />
+            <Insets bottom="40.0" top="60.0" />
          </opaqueInsets>
          <padding>
-            <Insets top="40.0" />
+            <Insets top="60.0" />
          </padding>
       </VBox>
    </center>
