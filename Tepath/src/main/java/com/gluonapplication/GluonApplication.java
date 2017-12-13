@@ -62,7 +62,6 @@ public class GluonApplication extends MobileApplication {
         addViewFactory(SPEZIALISTKONTAKT1_VIEW, () -> new Spezialistkontakt1View(SPEZIALISTKONTAKT1_VIEW).getView());
         addLayerFactory(MENU_LAYER, () -> new SidePopupView(new DrawerManager().getDrawer()));
     }
-
     @Override
     public void postInit(Scene scene) {
         Swatch.BLUE.assignTo(scene); // Die Farbe AppBar ist hier blau.
