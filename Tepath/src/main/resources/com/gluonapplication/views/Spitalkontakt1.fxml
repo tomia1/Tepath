@@ -42,6 +42,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
+
 <View maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <VBox prefHeight="568.0" prefWidth="335.0" BorderPane.alignment="CENTER">
@@ -53,7 +54,7 @@
                         <Insets bottom="10.0" left="10.0" />
                      </HBox.margin>
                   </Label>
-                  <Label text="Apothecarium Biel">
+                  <Label text="Spitalzentrum Biel">
                      <padding>
                         <Insets left="50.0" />
                      </padding>
@@ -70,7 +71,7 @@
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Label>
-                  <Label text="Lerchenweg 5, 2502 Biel">
+                  <Label text="Vogelsang 84, 2501 Biel">
                      <padding>
                         <Insets left="50.0" />
                      </padding>
@@ -84,7 +85,7 @@
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Label>
-                  <Label text="032 412 73 29">
+                  <Label text="032 324 24 24">
                      <HBox.margin>
                         <Insets left="50.0" />
                      </HBox.margin>
@@ -107,14 +108,14 @@
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField prefHeight="26.0" prefWidth="231.0">
+                  <TextField fx:id="betreff" prefHeight="26.0" prefWidth="231.0">
                      <HBox.margin>
                         <Insets left="50.0" />
                      </HBox.margin>
                   </TextField>
                </children>
             </HBox>
-            <HBox prefHeight="26.0" prefWidth="335.0">
+            <HBox fx:id="nachricht" prefHeight="26.0" prefWidth="335.0">
                <children>
                   <Label text="Nachricht :">
                      <HBox.margin>
@@ -125,7 +126,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <TextField prefHeight="100.0" prefWidth="333.0" />
+                  <TextField fx:id="senden" prefHeight="100.0" prefWidth="333.0" />
                </children>
             </HBox>
             <HBox prefHeight="62.0" prefWidth="335.0">
