@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.gluonhq.charm.glisten.mvc.View?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
@@ -9,87 +10,170 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<View fx:id="spitaleintritt" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" stylesheets="@checklistSpitaleintritt.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gluonapplication.views.ChecklisteSpitaleintrittPresenter">
-   <center>
-      <ScrollPane prefHeight="595.0" prefWidth="277.0" BorderPane.alignment="CENTER">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="420.0" prefWidth="277.0">
-               <children>
-                  <VBox prefHeight="584.0" prefWidth="286.0">
+<View fx:id="spezialistenbesuch" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" stylesheets="@../../git/Tepath/Tepath/src/main/resources/com/gluonapplication/views/secondary.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gluonapplication.views.ChecklisteSPezialistenbesuchPresenter">
+   <top>
+      <AnchorPane prefHeight="749.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane prefHeight="600.0" prefWidth="329.0">
+               <padding>
+                  <Insets left="40.0" top="20.0" />
+               </padding>
+               <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="277.0">
                      <children>
-                        <Label text="Dokumente" />
-                        <HBox prefHeight="50.0" prefWidth="202.0">
+                        <VBox layoutY="-1.0" prefWidth="286.0">
                            <children>
-                              <CheckBox mnemonicParsing="false" prefHeight="36.0" prefWidth="45.0" />
-                              <Label prefHeight="42.0" prefWidth="181.0" text="Ich habe meine Versicherungskarte dabei" wrapText="true" />
+                              <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="Dokumente">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox prefWidth="286.0">
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" prefHeight="36.0" prefWidth="45.0">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <Label style="-fx-font-size: 20;" text="Ich habe meine Versicherungskarte dabei" wrapText="true">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" prefHeight="36.0" prefWidth="45.0">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <Label style="-fx-font-size: 20;" text="Ich habe meinen Impfausweis dabei" wrapText="true" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" prefHeight="36.0" prefWidth="45.0">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <Label style="-fx-font-size: 20;" text="Ich habe meine Meidkamente &amp; Medikamentenplan dabei" wrapText="true" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" prefHeight="36.0" prefWidth="45.0">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <Label style="-fx-font-size: 20;" text="Ich habe meinen Allergiepass dabei (wenn vorhanden)" wrapText="true" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" prefHeight="36.0" prefWidth="45.0">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <Label style="-fx-font-size: 20;" text="Ich habe meine Befunde dabei          " wrapText="true" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" prefHeight="36.0" prefWidth="45.0">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <Label style="-fx-font-size: 20;" text="Ich habe meine Patientenverfügung dabei" wrapText="true" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="Persönliche Gegenstände">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox>
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" prefHeight="36.0" prefWidth="45.0">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <Label style="-fx-font-size: 20;" text="Ich habe meine Toiletten- &amp; Hygieneartikel dabei" wrapText="true" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" prefHeight="36.0" prefWidth="45.0">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <Label style="-fx-font-size: 20;" text="Ich habe bequeme Kleider dabei" wrapText="true" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" prefHeight="36.0" prefWidth="45.0">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <Label style="-fx-font-size: 20;" text="Ich habe meine Gehstöcke dabei" wrapText="true" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" prefHeight="36.0" prefWidth="45.0">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <Label style="-fx-font-size: 20;" text="Ich habe bequeme Schuhe dabei" wrapText="true" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
                            </children>
-                        </HBox>
-                        <HBox prefHeight="48.0" prefWidth="202.0">
-                           <children>
-                              <CheckBox mnemonicParsing="false" prefHeight="36.0" prefWidth="45.0" />
-                              <Label prefHeight="42.0" prefWidth="181.0" text="Ich  habe meine Vorlegungsdokumente dabei" wrapText="true" />
-                           </children>
-                        </HBox>
-                        <HBox prefHeight="58.0" prefWidth="202.0">
-                           <children>
-                              <CheckBox mnemonicParsing="false" prefHeight="36.0" prefWidth="45.0" />
-                              <Label prefHeight="42.0" prefWidth="181.0" text="Ich habe meine Röntgenbilder dabei" wrapText="true" />
-                           </children>
-                        </HBox>
-                        <HBox prefHeight="58.0" prefWidth="202.0">
-                           <children>
-                              <CheckBox mnemonicParsing="false" prefHeight="36.0" prefWidth="45.0" />
-                              <Label prefHeight="42.0" prefWidth="181.0" text="Ich habe meine Meidkamente &amp; Medikamentenplan dabei" wrapText="true" />
-                           </children>
-                        </HBox>
-                        <HBox prefHeight="58.0" prefWidth="202.0">
-                           <children>
-                              <CheckBox mnemonicParsing="false" prefHeight="36.0" prefWidth="45.0" />
-                              <Label prefHeight="42.0" prefWidth="181.0" text="Ich habe meinen Allergiepass dabei (wenn vorhanden)" wrapText="true" />
-                           </children>
-                        </HBox>
-                        <HBox prefHeight="58.0" prefWidth="202.0">
-                           <children>
-                              <CheckBox mnemonicParsing="false" prefHeight="36.0" prefWidth="45.0" />
-                              <Label prefHeight="42.0" prefWidth="181.0" text="Ich habe meine Befunde dabei          " wrapText="true" />
-                           </children>
-                        </HBox>
-                        <HBox prefHeight="58.0" prefWidth="202.0">
-                           <children>
-                              <CheckBox mnemonicParsing="false" prefHeight="36.0" prefWidth="45.0" />
-                              <Label prefHeight="42.0" prefWidth="181.0" text="Ich habe meinen EKG dabei              " wrapText="true" />
-                           </children>
-                        </HBox>
-                        <HBox prefHeight="73.0" prefWidth="286.0">
-                           <children>
-                              <CheckBox mnemonicParsing="false" prefHeight="36.0" prefWidth="45.0" />
-                              <Label prefHeight="77.0" prefWidth="181.0" text="Ich habe meine Patientenverfügung dabei (falls vorhanden)" wrapText="true" />
-                           </children>
-                        </HBox>
-                        <Label text="Persönliche Utensilien" />
-                        <HBox prefHeight="73.0" prefWidth="286.0">
-                           <children>
-                              <CheckBox mnemonicParsing="false" prefHeight="36.0" prefWidth="45.0" />
-                              <Label prefHeight="77.0" prefWidth="181.0" text="Ich habe meine Toiletten- &amp; Hygieneartikel dabei" wrapText="true" />
-                           </children>
-                        </HBox>
-                        <HBox prefHeight="73.0" prefWidth="286.0">
-                           <children>
-                              <CheckBox mnemonicParsing="false" prefHeight="36.0" prefWidth="45.0" />
-                              <Label prefHeight="77.0" prefWidth="181.0" text="Ich habe bequeme Kleider dabei" wrapText="true" />
-                           </children>
-                        </HBox>
-                        <HBox prefHeight="73.0" prefWidth="279.0">
-                           <children>
-                              <CheckBox mnemonicParsing="false" prefHeight="36.0" prefWidth="45.0" />
-                              <Label prefHeight="62.0" prefWidth="186.0" text="Ich habe meine Gehstöcke dabei" wrapText="true" />
-                           </children>
-                        </HBox>
+                        </VBox>
                      </children>
-                  </VBox>
-               </children>
-            </AnchorPane>
-        </content>
-      </ScrollPane>
-   </center>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </top>
 </View>
