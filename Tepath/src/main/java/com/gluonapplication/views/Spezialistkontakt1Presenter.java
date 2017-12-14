@@ -54,7 +54,7 @@ public class Spezialistkontakt1Presenter  {
                 AppBar appBar = MobileApplication.getInstance().getAppBar();
                 appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 
                         MobileApplication.getInstance().showLayer(GluonApplication.MENU_LAYER)));
-                appBar.setTitleText("Spezialistkontakt");
+                appBar.setTitleText("Spezialist");
                 appBar.getActionItems().add(MaterialDesignIcon.ARROW_BACK.button(e -> 
                 MobileApplication.getInstance().switchToPreviousView()));
             }
