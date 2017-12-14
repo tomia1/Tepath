@@ -25,14 +25,20 @@ public class ChecklistPresenter {
 
     @FXML
     private Button vorReha;
-
+    
+   
     @FXML
     void buttonRehaClick(ActionEvent event) {
-
+    	vorReha.setOnAction(e -> 
+        MobileApplication.getInstance().switchView(GluonApplication.CHECKLISTEREHAEINTRITT_VIEW));
+      	
+    	
     }
 
     @FXML
     void buttonSpezialistClick(ActionEvent event) {
+    	vorSpezialist.setOnAction(e -> 
+        MobileApplication.getInstance().switchView(GluonApplication.CHECKLISTESPEZIALISTENBESUCH_VIEW));
 
     }
 
@@ -40,20 +46,21 @@ public class ChecklistPresenter {
     void buttonSpitalClick(ActionEvent event) {
     	vorSpital.setOnAction(e -> 
         MobileApplication.getInstance().switchView(GluonApplication.CHECKLISTESPITALEINTRITT_VIEW));
+    	
 
     }
-
-
-    public void initialize() {
+    
+   
+public void initialize() {
     	viewChecklist.setShowTransitionFactory(BounceInRightTransition::new);
-    	 viewChecklist.showingProperty().addListener((obs, oldValue, newValue) -> {
+        viewChecklist.showingProperty().addListener((obs, oldValue, newValue) -> {
              if (newValue) {
                  AppBar appBar = MobileApplication.getInstance().getAppBar();
                  appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 
                          MobileApplication.getInstance().showLayer(GluonApplication.MENU_LAYER)));
                  appBar.setTitleText("Checklisten");
-                 appBar.getActionItems().add(MaterialDesignIcon.SEARCH.button(e -> 
-                         System.out.println("Search")));
+                 appBar.getActionItems().add(MaterialDesignIcon.ARROW_BACK.button(e -> 
+                 MobileApplication.getInstance().switchToPreviousView()));
              }
          });
     }

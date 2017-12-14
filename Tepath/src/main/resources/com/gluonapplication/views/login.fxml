@@ -3,7 +3,6 @@
 <?import com.gluonhq.charm.glisten.mvc.View?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -17,16 +16,11 @@
       <VBox prefHeight="200.0" prefWidth="100.0" />
    </children>
    <bottom>
-      <VBox alignment="CENTER" spacing="15.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="362.0" prefWidth="350.0" spacing="15.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox maxWidth="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="260.0">
+            <HBox maxWidth="-Infinity" minWidth="-Infinity" prefHeight="54.0" prefWidth="260.0">
                <children>
-                  <Label maxHeight="-Infinity" maxWidth="-Infinity" text="Name / ID  ">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </Label>
-                  <TextField fx:id="userName" prefHeight="26.0" prefWidth="193.0" promptText="userName" />
+                  <TextField fx:id="userName" alignment="TOP_LEFT" prefHeight="26.0" prefWidth="262.0" promptText="Benutzername" />
                </children>
                <padding>
                   <Insets bottom="40.0" />
@@ -37,12 +31,7 @@
             </HBox>
             <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="260.0">
                <children>
-                  <Label text="Password  ">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </Label>
-                  <PasswordField fx:id="password" prefHeight="26.0" prefWidth="193.0" promptText="password" />
+                  <PasswordField fx:id="password" alignment="TOP_LEFT" prefHeight="26.0" prefWidth="260.0" promptText="Passwort" />
                </children>
                <VBox.margin>
                   <Insets />
@@ -53,7 +42,10 @@
             </HBox>
             <HBox alignment="TOP_RIGHT" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="260.0">
                <children>
-                  <Button fx:id="anmelden" minWidth="45.0" mnemonicParsing="false" onAction="#MakeLogin" onMouseClicked="#gotToHomePage" prefHeight="32.0" prefWidth="88.0" text="Anmelden" />
+                  <Button fx:id="anmelden" minWidth="45.0" mnemonicParsing="false" onAction="#MakeLogin" prefHeight="32.0" prefWidth="88.0" style="-fx-background-color: #b4c7e7; -fx-border-radius: 10; -fx-background-radius: 10;" text="Anmelden">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></Button>
                </children>
             </HBox>
          </children>

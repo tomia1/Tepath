@@ -34,39 +34,44 @@ public class KontaktePresenter {
 
 	    @FXML
 	    void buttonApothekeClick(ActionEvent event) {
-
+	    	apotheke.setOnAction(e -> 
+	        MobileApplication.getInstance().switchView(GluonApplication.APOTHEKEKONTAKT1_VIEW));
 	    }
 
 	    @FXML
 	    void buttonHausarztClick(ActionEvent event) {
-
+	    	hausarzt.setOnAction(e -> 
+	        MobileApplication.getInstance().switchView(GluonApplication.HAUSARZTKONTAKT1_VIEW));
 	    }
 
 	    @FXML
 	    void buttonRehaClick(ActionEvent event) {
-
+	    	reha.setOnAction(e -> 
+	        MobileApplication.getInstance().switchView(GluonApplication.REHAKONTAKT1_VIEW));
 	    }
 
 	    @FXML
 	    void buttonSpezialistClick(ActionEvent event) {
-
+	    	spezialist.setOnAction(e -> 
+	        MobileApplication.getInstance().switchView(GluonApplication.SPEZIALISTKONTAKT1_VIEW));
 	    }
 
 	    @FXML
 	    void buttonSpitalClick(ActionEvent event) {
-
+	    	spital.setOnAction(e -> 
+	        MobileApplication.getInstance().switchView(GluonApplication.SPITALKONTAKT1_VIEW));
 	    }
 
 	    public void initialize() {
 	    	kontakt.setShowTransitionFactory(BounceInRightTransition::new);
-	    	 kontakt.showingProperty().addListener((obs, oldValue, newValue) -> {
+	    	kontakt.showingProperty().addListener((obs, oldValue, newValue) -> {
 	             if (newValue) {
 	                 AppBar appBar = MobileApplication.getInstance().getAppBar();
 	                 appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 
 	                         MobileApplication.getInstance().showLayer(GluonApplication.MENU_LAYER)));
 	                 appBar.setTitleText("Kontakte");
-	                 appBar.getActionItems().add(MaterialDesignIcon.SEARCH.button(e -> 
-	                         System.out.println("Search")));
+	                 appBar.getActionItems().add(MaterialDesignIcon.ARROW_BACK.button(e -> 
+	                         MobileApplication.getInstance().switchToPreviousView()));
 	             }
 	         });
 	    }
