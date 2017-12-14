@@ -26,7 +26,7 @@ public class DrawerManager {
         this.drawer = new NavigationDrawer();
         
         
-        // Die Beschriftung im eingeblendeten Menü ist hier "TEPATH" festgelegt worden.
+        // Die Beschriftung im eingeblendeten Menu ist hier "TEPATH" festgelegt worden.
          //Darunter wird das Icon der Applikation plaziert.
          
         
@@ -36,8 +36,8 @@ public class DrawerManager {
         drawer.setHeader(header);
         
         
-          //Die Verschiedenen Menüinhalte werden hier erstellt. 
-          //Es wird der Name benannt, der Icon der neben dem Namen steht und die Ansicht die geöffnet wird.
+          //Die Verschiedenen Menuinhalte werden hier erstellt. 
+          //Es wird der Name benannt, der Icon der neben dem Namen steht und die Ansicht die geoffnet wird.
          
         
         final Item ablauf = new ViewItem("Ablauf", MaterialDesignIcon.QUEUE_PLAY_NEXT.graphic(), SECONDARY_VIEW, ViewStackPolicy.SKIP);
@@ -50,7 +50,7 @@ public class DrawerManager {
 
         
         
-         //Wenn im Menü etwas ausgewählt wird und die Seite angezeit wird, verschwindet der Menü-Layer.
+         //Wenn im Menu etwas ausgewaehlt wird und die Seite angezeit wird, verschwindet der Menu-Layer.
          
         
         drawer.addEventHandler(NavigationDrawer.ITEM_SELECTED, 

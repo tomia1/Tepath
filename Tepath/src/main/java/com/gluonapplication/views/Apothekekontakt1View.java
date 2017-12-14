@@ -14,7 +14,7 @@ public class Apothekekontakt1View {
     
     public View getView() {
         try {
-            View view = FXMLLoader.load(Apothekekontakt1View.class.getResource("apothekekontakt1.fxml"));
+            View view = FXMLLoader.load(Apothekekontakt1View.class.getResource("Apothekekontakt.fxml"));
             view.setName(name);
             return view;
         } catch (IOException e) {

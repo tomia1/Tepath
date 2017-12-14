@@ -8,20 +8,48 @@ import com.gluonhq.charm.glisten.mvc.View;
 import com.gluonhq.charm.glisten.visual.MaterialDesignIcon;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 
 public class Spezialistkontakt1Presenter  {
 	
 
     @FXML
-    private View spezialistkontakt1;
+    private View spezialistkontakt;
+    
+    @FXML
+    private Label labelN;
+
+    @FXML
+    private Label labelName;
+
+    @FXML
+    private Label labelA;
+
+    @FXML
+    private Label labelStrasse;
+
+    @FXML
+    private Label labelOrt;
+
+    @FXML
+    private Label LabelT;
+
+    @FXML
+    private Label labelTelefon;
+
+    @FXML
+    private Label labelE;
+
+    @FXML
+    private Label labelMail;
 
 //    protected void updateAppBar(AppBar appBar) {
 //        appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> switchView(SECONDARY_VIEW)));
 //        appBar.setTitleText("Vor Rehaeintritt");
 //    }
     public void initialize() {
-    	spezialistkontakt1.setShowTransitionFactory(BounceInRightTransition::new);
-    	spezialistkontakt1.showingProperty().addListener((obs, oldValue, newValue) -> {
+    	spezialistkontakt.setShowTransitionFactory(BounceInRightTransition::new);
+    	spezialistkontakt.showingProperty().addListener((obs, oldValue, newValue) -> {
             if (newValue) {
                 AppBar appBar = MobileApplication.getInstance().getAppBar();
                 appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 

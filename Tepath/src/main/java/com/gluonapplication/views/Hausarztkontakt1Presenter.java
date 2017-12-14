@@ -8,12 +8,40 @@ import com.gluonhq.charm.glisten.mvc.View;
 import com.gluonhq.charm.glisten.visual.MaterialDesignIcon;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 
 public class Hausarztkontakt1Presenter  {
 	
 
     @FXML
     private View hausarztkontakt1;
+    
+    @FXML
+    private Label labelN;
+
+    @FXML
+    private Label labelName;
+
+    @FXML
+    private Label labelA;
+
+    @FXML
+    private Label labelStrasse;
+
+    @FXML
+    private Label labelOrt;
+
+    @FXML
+    private Label labelT;
+
+    @FXML
+    private Label labelTelefon;
+
+    @FXML
+    private Label labelE;
+
+    @FXML
+    private Label labelMail;
 
 
     public void initialize() {
@@ -23,7 +51,7 @@ public class Hausarztkontakt1Presenter  {
                 AppBar appBar = MobileApplication.getInstance().getAppBar();
                 appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 
                         MobileApplication.getInstance().showLayer(GluonApplication.MENU_LAYER)));
-                appBar.setTitleText("Hausarztkontakt");
+                appBar.setTitleText("Hausarzt");
                 appBar.getActionItems().add(MaterialDesignIcon.ARROW_BACK.button(e -> 
                 MobileApplication.getInstance().switchToPreviousView()));
             }

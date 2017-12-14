@@ -14,7 +14,7 @@ public class Spitalkontakt1View {
     
     public View getView() {
         try {
-            View view = FXMLLoader.load(Spitalkontakt1View.class.getResource("spitalkontakt1.fxml"));
+            View view = FXMLLoader.load(Spitalkontakt1View.class.getResource("Spitalkontakt.fxml"));
             view.setName(name);
             return view;
         } catch (IOException e) {
