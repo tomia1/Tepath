@@ -1,25 +1,22 @@
 package com.gluonapplication;
 
 import com.gluonapplication.views.Apothekekontakt1View;
-import com.gluonapplication.views.Apothekekontakt1View;
 import com.gluonapplication.views.ChecklistView;
 import com.gluonapplication.views.ChecklisteRehaeintrittView;
+import com.gluonapplication.views.ChecklisteSpezialistenbesuchView;
 import com.gluonapplication.views.ChecklisteSpitaleintrittView;
 import com.gluonapplication.views.GesundheitszustandView;
-import com.gluonapplication.views.Hausarztkontakt1View;
 import com.gluonapplication.views.Hausarztkontakt1View;
 import com.gluonapplication.views.KontakteView;
 import com.gluonapplication.views.PrimaryView;
 import com.gluonapplication.views.Rehakontakt1View;
-import com.gluonapplication.views.Rehakontakt1View;
-import com.gluonapplication.views.Spezialistkontakt1View;
-import com.gluonapplication.views.Spitalkontakt1View;
 import com.gluonapplication.views.SecondaryView;
 import com.gluonapplication.views.Spezialistkontakt1View;
 import com.gluonapplication.views.Spitalkontakt1View;
 import com.gluonhq.charm.glisten.application.MobileApplication;
 import com.gluonhq.charm.glisten.layout.layer.SidePopupView;
 import com.gluonhq.charm.glisten.visual.Swatch;
+
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
@@ -53,7 +50,7 @@ public class GluonApplication extends MobileApplication {
         addViewFactory(KONTAKTE_VIEW, () -> new KontakteView(KONTAKTE_VIEW).getView());
         addViewFactory(GESUNDHEITSZUSTAND_VIEW, () -> new GesundheitszustandView(GESUNDHEITSZUSTAND_VIEW).getView());
         addViewFactory(CHECKLISTESPITALEINTRITT_VIEW, () -> new ChecklisteSpitaleintrittView(CHECKLISTESPITALEINTRITT_VIEW).getView());
-        addViewFactory(CHECKLISTESPEZIALISTENBESUCH_VIEW, () -> new ChecklisteSpitaleintrittView(CHECKLISTESPEZIALISTENBESUCH_VIEW).getView());
+        addViewFactory(CHECKLISTESPEZIALISTENBESUCH_VIEW, () -> new ChecklisteSpezialistenbesuchView(CHECKLISTESPEZIALISTENBESUCH_VIEW).getView());
         addViewFactory(CHECKLISTEREHAEINTRITT_VIEW, () -> new ChecklisteRehaeintrittView(CHECKLISTEREHAEINTRITT_VIEW).getView());
         addViewFactory(HAUSARZTKONTAKT1_VIEW, () -> new Hausarztkontakt1View(HAUSARZTKONTAKT1_VIEW).getView());
         addViewFactory(SPITALKONTAKT1_VIEW, () -> new Spitalkontakt1View(SPITALKONTAKT1_VIEW).getView());

@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<View fx:id="spezialistenbesuch" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" stylesheets="@../../git/Tepath/Tepath/src/main/resources/com/gluonapplication/views/secondary.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gluonapplication.views.ChecklisteSPezialistenbesuchPresenter">
+<View fx:id="spezialistenbesuch" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" stylesheets="@checklistSpezialistenbesuch.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gluonapplication.views.ChecklisteSpezialistenbesuchPresenter">
    <top>
       <AnchorPane prefHeight="749.0" prefWidth="350.0" BorderPane.alignment="CENTER">
          <children>
