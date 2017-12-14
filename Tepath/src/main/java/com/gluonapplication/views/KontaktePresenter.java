@@ -33,31 +33,31 @@ public class KontaktePresenter {
 	    private Button spezialist;
 
 	    @FXML
-	    void buttonApothekeClick(ActionEvent event) {
+	    void buttonApothekekontaktClick(ActionEvent event) {
 	    	apotheke.setOnAction(e -> 
 	        MobileApplication.getInstance().switchView(GluonApplication.APOTHEKEKONTAKT1_VIEW));
 	    }
 
 	    @FXML
-	    void buttonHausarztClick(ActionEvent event) {
+	    void buttonHausarztkontaktClick(ActionEvent event) {
 	    	hausarzt.setOnAction(e -> 
 	        MobileApplication.getInstance().switchView(GluonApplication.HAUSARZTKONTAKT1_VIEW));
 	    }
 
 	    @FXML
-	    void buttonRehaClick(ActionEvent event) {
+	    void buttonRehakontaktClick(ActionEvent event) {
 	    	reha.setOnAction(e -> 
 	        MobileApplication.getInstance().switchView(GluonApplication.REHAKONTAKT1_VIEW));
 	    }
 
 	    @FXML
-	    void buttonSpezialistClick(ActionEvent event) {
+	    void buttonSpezialistkontaktClick(ActionEvent event) {
 	    	spezialist.setOnAction(e -> 
 	        MobileApplication.getInstance().switchView(GluonApplication.SPEZIALISTKONTAKT1_VIEW));
 	    }
 
 	    @FXML
-	    void buttonSpitalClick(ActionEvent event) {
+	    void buttonSpitalkontaktClick(ActionEvent event) {
 	    	spital.setOnAction(e -> 
 	        MobileApplication.getInstance().switchView(GluonApplication.SPITALKONTAKT1_VIEW));
 	    }

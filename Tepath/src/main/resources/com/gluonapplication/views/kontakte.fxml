@@ -44,7 +44,7 @@
    <center>
       <VBox alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="350.0" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="hausarzt" graphicTextGap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buttonHausarztClick" prefHeight="60.0" prefWidth="220.0" style="-fx-font-size: 20; -fx-alignment: left;" text="Hausarzt">
+            <Button fx:id="hausarzt" graphicTextGap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buttonHausarztkontaktClick" prefHeight="60.0" prefWidth="220.0" style="-fx-font-size: 20; -fx-alignment: left;" text="Hausarzt">
                <graphic>
                   <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -53,7 +53,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="spital" graphicTextGap="10.0" lineSpacing="20.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buttonSpitalClick" prefHeight="60.0" prefWidth="220.0" style="-fx-font-size: 20; -fx-alignment: left;" text="Spital">
+            <Button fx:id="spital" graphicTextGap="10.0" lineSpacing="20.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buttonSpitalkontaktClick" prefHeight="60.0" prefWidth="220.0" style="-fx-font-size: 20; -fx-alignment: left;" text="Spital">
                <graphic>
                   <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -62,7 +62,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="apotheke" graphicTextGap="10.0" lineSpacing="20.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buttonApothekeClick" prefHeight="60.0" prefWidth="220.0" style="-fx-font-size: 20; -fx-alignment: left;" text="Apotheke">
+            <Button fx:id="apotheke" graphicTextGap="10.0" lineSpacing="20.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buttonApothekekontaktClick" prefHeight="60.0" prefWidth="220.0" style="-fx-font-size: 20; -fx-alignment: left;" text="Apotheke">
                <graphic>
                   <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -71,7 +71,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="spezialist" graphicTextGap="10.0" lineSpacing="20.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buttonSpezialistClick" prefHeight="60.0" prefWidth="220.0" style="-fx-font-size: 20; -fx-alignment: left;" text="Spezialist">
+            <Button fx:id="spezialist" graphicTextGap="10.0" lineSpacing="20.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buttonSpezialistkontaktClick" prefHeight="60.0" prefWidth="220.0" style="-fx-font-size: 20; -fx-alignment: left;" text="Spezialist">
                <graphic>
                   <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -80,7 +80,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="reha" graphicTextGap="10.0" lineSpacing="20.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buttonRehaClick" prefHeight="60.0" prefWidth="220.0" style="-fx-font-size: 20; -fx-alignment: left;" text="Reha">
+            <Button fx:id="reha" graphicTextGap="10.0" lineSpacing="20.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buttonRehakontaktClick" prefHeight="60.0" prefWidth="220.0" style="-fx-font-size: 20; -fx-alignment: left;" text="Reha">
                <graphic>
                   <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
