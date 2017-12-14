@@ -13,12 +13,12 @@ public class ChecklisteSpitaleintrittPresenter {
 	
 
     @FXML
-    private View spitaleintritt;
+    private View secondary;
 
 
     public void initialize() {
-     spitaleintritt.setShowTransitionFactory(BounceInRightTransition::new);
-   	 spitaleintritt.showingProperty().addListener((obs, oldValue, newValue) -> {
+     secondary.setShowTransitionFactory(BounceInRightTransition::new);
+   	 secondary.showingProperty().addListener((obs, oldValue, newValue) -> {
             if (newValue) {
                 AppBar appBar = MobileApplication.getInstance().getAppBar();
                 appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 
