@@ -14,8 +14,10 @@ import com.mysql.jdbc.Statement;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
 
 public class PrimaryPresenter {
 
@@ -30,11 +32,19 @@ public class PrimaryPresenter {
     
     @FXML
     private PasswordField password;
+    
+    @FXML
+    private Label message;
 
     @FXML
     void MakeLogin(ActionEvent event) {
+    	if (userName.getText().equals("hager") && password.getText().equals("hager")) {
     	anmelden.setOnAction(e -> 
         MobileApplication.getInstance().switchView(GluonApplication.SECONDARY_VIEW));
+    	} else {
+    		message.setText("Benutzername oder Passwort falsch!");
+    		message.setTextFill(Color.RED);
+    	}
     }
 
 
