@@ -16,4 +16,17 @@ public class AndroidSMSService implements SMSService {
 
 		Services.get(SMSService.class).ifPresent(s -> button.setOnAction(e -> s.sendSMS(textField.getText())));
 	}
+	
+	
+	@Override
+	public void sendEmail(String email) {
+		Intent emailIntent = new Intent(Intent.ACTION_VIEW);
+		
+		emailIntent.setData(Uri.parse("@email:"));
+		eimailIntent.putExtra("address", email);
+		FXActivity.getInstance().startActivity(emailIntent);
+
+		Services.get(EmailService.class).ifPresent(s -> button.setOnAction(e -> s.sendEmail(textField.getText())));
+		
+	}
 }

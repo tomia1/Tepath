@@ -6,6 +6,7 @@ import com.gluonhq.charm.glisten.application.MobileApplication;
 import com.gluonhq.charm.glisten.control.AppBar;
 import com.gluonhq.charm.glisten.mvc.View;
 import com.gluonhq.charm.glisten.visual.MaterialDesignIcon;
+//import com.gluonhq.charm.down.plugins.android;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -40,8 +41,12 @@ public class Spitalkontakt1Presenter  {
     @FXML
     private Label labelE;
 
-    @FXML
-    private Label labelMail;
+   // @FXML
+//    private Label labelMail;
+//    void emailSenden(){
+//    	labelE.setOnAction(e -> 
+//    	sendEmail());
+   // }
 
 //    protected void updateAppBar(AppBar appBar) {
 //        appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> switchView(SECONDARY_VIEW)));
@@ -57,6 +62,7 @@ public class Spitalkontakt1Presenter  {
                 appBar.setTitleText("Spital");
                 appBar.getActionItems().add(MaterialDesignIcon.ARROW_BACK.button(e -> 
                 MobileApplication.getInstance().switchToPreviousView()));
+                
             }
         });
     }

@@ -7,6 +7,7 @@ import com.gluonhq.charm.glisten.control.AppBar;
 import com.gluonhq.charm.glisten.mvc.View;
 import com.gluonhq.charm.glisten.visual.MaterialDesignIcon;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
@@ -42,7 +43,7 @@ public class Apothekekontakt1Presenter  {
 
     @FXML
     private Label labelMail;
-
+	
 //    protected void updateAppBar(AppBar appBar) {
 //        appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> switchView(SECONDARY_VIEW)));
 //        appBar.setTitleText("Vor Rehaeintritt");
