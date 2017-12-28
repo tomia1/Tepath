@@ -1,6 +1,10 @@
 package com.gluonapplication.views;
 
 import java.sql.DriverManager;
+
+import java.sql.*;
+import java.util.*;
+import com.microsoft.sqlserver.jdbc.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -21,6 +25,12 @@ import javafx.scene.paint.Color;
 
 public class PrimaryPresenter {
 
+    public static final String URL = "jdbc:sqlserver://147.87.116.42:1433; databaseName=Tepath";
+    public static Connection connection;
+    public String loginvalue = "" ;
+    public String passwordvalue = "";
+	
+	
     @FXML
     private View primary;
 
@@ -38,13 +48,28 @@ public class PrimaryPresenter {
 
     @FXML
     void MakeLogin(ActionEvent event) {
-    	if (userName.getText().equals("hager") && password.getText().equals("hager")) {
-    	anmelden.setOnAction(e -> 
-        MobileApplication.getInstance().switchView(GluonApplication.SECONDARY_VIEW));
-    	} else {
-    		message.setText("Benutzername oder Passwort falsch!");
-    		message.setTextFill(Color.RED);
+    	
+    	this.loginvalue = userName.getText();
+    	this.passwordvalue = password.getText();
+    	
+    	try {
+    		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+    		
+    		java.sql.Connection connection = DriverManager.getConnection(URL,loginvalue, passwordvalue);
     	}
+    	
+    	catch(Exception exc){
+    		exc.printStackTrace();
+    	}
+    	
+    	
+//    	if (userName.getText().equals("hager") && password.getText().equals("hager")) {
+//    	anmelden.setOnAction(e -> 
+//        MobileApplication.getInstance().switchView(GluonApplication.SECONDARY_VIEW));
+//    	} else {
+//    		message.setText("Benutzername oder Passwort falsch!");
+//    		message.setTextFill(Color.RED);
+//    	}
     }
 
 
