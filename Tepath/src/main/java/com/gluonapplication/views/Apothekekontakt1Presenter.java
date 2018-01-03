@@ -92,7 +92,7 @@ public class Apothekekontakt1Presenter  {
    public void ShowMap(){
 	   
 		  if(APTK_Map.isPressed()){
-		 //RH_MapImage.setImageResource(R.drawable.RehaImage.png);
+		 APTK_MapImage.setImageResource(R.drawable.RehaImage.png);
 	    	} 
 			  
 	 
