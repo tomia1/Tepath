@@ -84,7 +84,7 @@ public class Hausarztkontakt1Presenter  {
    public void ShowMap(){
 	   
 		  if(HA_Map.isPressed()){
-		 //RH_MapImage.setImageResource(R.drawable.RehaImage.png);
+		 HA_MapImage.setImageResource(R.drawable.HA_MapImage.png);
 	    	} 
 			  
 	 
