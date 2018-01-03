@@ -63,8 +63,10 @@ public class Apothekekontakt1Presenter  {
   private Button APTK_Anrufen;
   @FXML
   private Button APTK_Map;
+//  @FXML
+//  private HBox APTK_MapImage;
   @FXML
-  private HBox APTK_MapImage;
+  private ImageView APTK_MapImage;
   
   @FXML
   private image=

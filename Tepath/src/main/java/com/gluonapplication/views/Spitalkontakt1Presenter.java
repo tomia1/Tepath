@@ -68,7 +68,7 @@ public class Spitalkontakt1Presenter  {
   @FXML
   private Button SPT_Map;
   @FXML
-  private HBox SPT_MapImage;
+  private ImageView SPT_MapImage;
   
 //  @FXML
 //  private image=
@@ -105,8 +105,7 @@ public class Spitalkontakt1Presenter  {
 		 //RH_MapImage.setImageResource(R.drawable.RehaImage.png);
 	    	} 
 			  
-	 
-		  }
+	 	  }
     
     //----------------------------------------------------------
 

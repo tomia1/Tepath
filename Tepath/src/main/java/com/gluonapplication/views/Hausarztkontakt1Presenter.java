@@ -60,7 +60,7 @@ public class Hausarztkontakt1Presenter  {
   @FXML
   private Button HA_Map;
   @FXML
-  private HBox HA_MapImage;
+  private ImageView  HA_MapImage;
   
 
   

@@ -62,7 +62,7 @@ public class Spezialistkontakt1Presenter  {
   @FXML
   private Button SPZ_Map;
   @FXML
-  private HBox SPZ_MapImage;
+  private ImageView SPZ_MapImage;
   
 //  @FXML
 //  private image=

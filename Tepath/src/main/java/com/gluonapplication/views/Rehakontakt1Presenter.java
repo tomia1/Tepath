@@ -65,7 +65,7 @@ public class Rehakontakt1Presenter  {
   @FXML
   private Button RH_Map;
   @FXML
-  private HBox RH_MapImage;
+  private ImageView  RH_MapImage;
   
 //  @FXML
 //  private image=
