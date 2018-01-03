@@ -14,7 +14,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
+import android.R;
+import android.app.Activity;
 
+
+import android.content.Intent;
+import android.net.Uri;
+import android.widget.ImageView;
+import android.view.*;
 public class Spezialistkontakt1Presenter  {
 	
 

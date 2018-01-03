@@ -20,6 +20,11 @@ import android.net.Uri;
 import android.widget.ImageView;
 import android.view.*;
 
+
+
+import android.R;
+import android.app.Activity;
+
 public class Rehakontakt1Presenter  {
 	
 	ImageView image;

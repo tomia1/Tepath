@@ -6,7 +6,7 @@ import com.gluonhq.charm.glisten.application.MobileApplication;
 import com.gluonhq.charm.glisten.control.AppBar;
 import com.gluonhq.charm.glisten.mvc.View;
 import com.gluonhq.charm.glisten.visual.MaterialDesignIcon;
-//import com.gluonhq.charm.down.plugins.android;
+import com.gluonhq.charm.down.plugins.android;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -15,6 +15,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
+import android.R;
+import android.app.Activity;
+
+
+import android.content.Intent;
+import android.net.Uri;
+import android.widget.ImageView;
+import android.view.*;
 
 public class Spitalkontakt1Presenter  {
 	
