@@ -66,18 +66,10 @@ public class Apothekekontakt1Presenter  {
   @FXML
   private HBox APTK_MapImage;
   
-//  @FXML
-//  private image=
-//  image = (ImageView) findViewById(R.id.mapImage)
-  void HAanrufen(){
-	  if(APTK_Anrufen.isPressed()){
-		 
-		APTK_AnrufLabel.setText(labelTelefon +  ": Calling...");
-  		APTK_AnrufLabel.setTextFill(Color.GREEN);
-
-	    	} 
- 
-	  }
+  @FXML
+  private image=
+  image = (ImageView) findViewById(R.id.mapImage)
+  
   
    public void CallApotheke(){
 	   

@@ -78,12 +78,12 @@ public class Hausarztkontakt1Presenter  {
 
 		  
  
-	  }
+	}
   
-   }
+   }  
    public void ShowMap(){
 	   
-		  if(HA_Map.isPressed()){
+	    if(HA_Map.isPressed()){
 		 HA_MapImage.setImageResource(R.drawable.HA_MapImage.png);
 	    	} 
 			  
