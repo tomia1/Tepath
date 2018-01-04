@@ -6,10 +6,23 @@ import com.gluonhq.charm.glisten.application.MobileApplication;
 import com.gluonhq.charm.glisten.control.AppBar;
 import com.gluonhq.charm.glisten.mvc.View;
 import com.gluonhq.charm.glisten.visual.MaterialDesignIcon;
-//import com.gluonhq.charm.down.plugins.android;
+import com.gluonhq.charm.down.plugins.android;
 
+import android.content.Intent;
+import android.net.Uri;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
+import android.R;
+import android.app.Activity;
+
+
+import android.content.Intent;
+import android.net.Uri;
+import android.widget.ImageView;
+import android.view.*;
 
 public class Spitalkontakt1Presenter  {
 	
@@ -47,11 +60,63 @@ public class Spitalkontakt1Presenter  {
 //    	labelE.setOnAction(e -> 
 //    	sendEmail());
    // }
+  //--------------------------------------------------------------
+    @FXML
+    private Label SPT_AnrufLabel;
+  @FXML
+  private Button SPT_Anrufen;
+  @FXML
+  private Button SPT_Map;
+  @FXML
+  private ImageView SPT_MapImage;
+  
+//  @FXML
+//  private image=
+//  image = (ImageView) findViewById(R.id.mapImage)
+  void SPTanrufen(){
+	  if(SPT_Anrufen.isPressed()){
+		 
+		SPT_AnrufLabel.setText(labelTelefon +  ": Calling...");
+  		SPT_AnrufLabel.setTextFill(Color.GREEN);
+
+	    	} 
+ 
+	  }
+  
+   public void CallSptial(){
+	   
+	  if(SPT_Anrufen.isPressed()){
+		 Intent callIntent_SPT = new Intent(Intent.ACTION_DIAL);
+		 callIntent_SPT.setData(Uri.parse("tel:032 324 24 24"));
+		  callIntent_SPT.setData(Uri.parse("tel:032 324 24 24"));
+		  startActivity(callIntent_SPT);
+		  
+		  SPT_AnrufLabel.setText(labelTelefon +  ": Calling...");
+	  	  SPT_AnrufLabel.setTextFill(Color.GREEN);
+
+	  
+ 
+	  }
+  
+   }
+   public void ShowMap(){
+	   
+		  if(SPT_Map.isPressed()){
+		 //RH_MapImage.setImageResource(R.drawable.RehaImage.png);
+	    	} 
+			  
+	 	  }
+    
+    //----------------------------------------------------------
 
 //    protected void updateAppBar(AppBar appBar) {
 //        appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> switchView(SECONDARY_VIEW)));
 //        appBar.setTitleText("Vor Rehaeintritt");
 //    }
+    private void startActivity(Intent callIntent) {
+		// TODO Auto-generated method stub
+		
+	}
     public void initialize() {
     	spitalkontakt.setShowTransitionFactory(BounceInRightTransition::new);
     	spitalkontakt.showingProperty().addListener((obs, oldValue, newValue) -> {
@@ -62,6 +127,7 @@ public class Spitalkontakt1Presenter  {
                 appBar.setTitleText("Spital");
                 appBar.getActionItems().add(MaterialDesignIcon.ARROW_BACK.button(e -> 
                 MobileApplication.getInstance().switchToPreviousView()));
+               
                 
             }
         });
