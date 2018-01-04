@@ -55,25 +55,7 @@ public class PrimaryPresenter {
     	try {
     		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
     		
-<<<<<<< HEAD
-    		java.sql.Connection connection = DriverManager.getConnection(URL,"Patient", "change9It");
-    		java.sql.Statement myStmt = connection.createStatement();
-    		
-    		ResultSet myRs = myStmt.executeQuery("select * from login");
-    		
-    		
-        	if (userName.getText().equals(myRs.getString("Username")) && password.getText().equals(myRs.getString("Password"))) {
-        	anmelden.setOnAction(e -> 
-            MobileApplication.getInstance().switchView(GluonApplication.SECONDARY_VIEW));
-        	} else {
-        		message.setText("Benutzername oder Passwort falsch!");
-        		message.setTextFill(Color.RED);
-        	}
-    		
-    		
-=======
     		java.sql.Connection connection = DriverManager.getConnection(URL,loginvalue, passwordvalue);
->>>>>>> branch 'master' of https://github.com/tomia1/Tepath.git
     	}
     	
     	catch(Exception exc){

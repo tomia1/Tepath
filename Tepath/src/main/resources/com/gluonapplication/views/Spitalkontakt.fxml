@@ -34,14 +34,12 @@
 
 <?import com.gluonhq.charm.glisten.mvc.View?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<View fx:id="spitalkontakt" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" stylesheets="@kontakte.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gluonapplication.views.Spitalkontakt1Presenter">
+<View fx:id="spitalkontakt" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" stylesheets="@kontakte.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gluonapplication.views.Spitalkontakt1Presenter">
    <top>
       <HBox prefHeight="48.0" prefWidth="350.0" BorderPane.alignment="CENTER" />
    </top>
@@ -111,28 +109,10 @@
                   <Label fx:id="labelMail" style="-fx-font-size: 20;" text="info@szb.ch" />
                </children>
             </HBox>
-            <HBox fx:id="SPT_MapImage" alignment="CENTER" prefHeight="171.0" prefWidth="350.0">
+            <HBox alignment="CENTER" prefHeight="171.0" prefWidth="350.0">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
-               <children>
-                  <ImageView fx:id="SPT_MapImage" fitHeight="170.0" fitWidth="346.0" pickOnBounds="true" preserveRatio="true" />
-               </children>
-            </HBox>
-            <HBox prefHeight="79.0" prefWidth="350.0">
-               <children>
-                  <Label fx:id="SPT_AnrufLabel" />
-                  <Button fx:id="SPT_Map" mnemonicParsing="false" prefHeight="44.0" prefWidth="102.0" text="Map">
-                     <HBox.margin>
-                        <Insets left="50.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button fx:id="SPT_Anrufen" mnemonicParsing="false" prefHeight="46.0" prefWidth="98.0" text="Anrufen">
-                     <HBox.margin>
-                        <Insets left="50.0" />
-                     </HBox.margin>
-                  </Button>
-               </children>
             </HBox>
          </children>
       </VBox>

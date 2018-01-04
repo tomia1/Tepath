@@ -3,7 +3,6 @@
         <supports-screens android:xlargeScreens="true"/>
         <uses-permission android:name="android.permission.INTERNET"/>
         <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-		<uses-permission android:name="android.permission.CALL_PHONE"/>
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
         <uses-sdk android:minSdkVersion="4" android:targetSdkVersion="21"/>
         <application android:label="Tepath" android:name="android.support.multidex.MultiDexApplication" android:icon="@mipmap/ic_launcher">
