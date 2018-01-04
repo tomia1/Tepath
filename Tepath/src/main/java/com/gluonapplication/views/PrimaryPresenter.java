@@ -55,7 +55,7 @@ public class PrimaryPresenter {
     	try {
     		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
     		
-    		java.sql.Connection connection = DriverManager.getConnection(URL,loginvalue, passwordvalue);
+    		java.sql.Connection connection = DriverManager.getConnection(URL,"Patient", "change9It");
     		java.sql.Statement myStmt = connection.createStatement();
     		
     		ResultSet myRs = myStmt.executeQuery("select * from login");
