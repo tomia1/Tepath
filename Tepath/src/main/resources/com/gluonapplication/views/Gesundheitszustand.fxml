@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.mvc.View?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<View fx:id="Gesundheitszustand" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" stylesheets="@../../git/Tepath/Tepath/src/main/resources/com/gluonapplication/views/secondary.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gluonapplication.views.GesundheitszustandPresenter">
+   <top>
+      <VBox prefHeight="183.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox>
+               <children>
+                  <Label style="-fx-font-size: 20;" text="Temperatur:" />
+                  <TextField fx:id="Temperaturlabel" prefHeight="26.0" prefWidth="50.0">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label style="-fx-font-size: 20;" text="°C">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="30.0" top="30.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets bottom="30.0" />
+               </opaqueInsets>
+            </HBox>
+            <HBox prefWidth="200.0">
+               <children>
+                  <Label style="-fx-font-size: 20;" text="Zuckerwert:" />
+                  <TextField fx:id="Zuckerwertlabel" prefHeight="26.0" prefWidth="50.0">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label style="-fx-font-size: 20;" text="mmol/l">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </HBox>
+            <Button fx:id="GZTEMPZUCKERbutton" mnemonicParsing="false" text="Speichern">
+               <VBox.margin>
+                  <Insets left="220.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+      </VBox>
+   </top>
+   <center>
+      <ScrollPane prefHeight="425.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets left="40.0" top="20.0" />
+         </padding>
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="277.0">
+               <children>
+                  <VBox layoutY="-1.0" prefWidth="286.0">
+                     <children>
+                        <HBox prefWidth="200.0">
+                           <children>
+                              <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="Haben Sie:">
+                                 <HBox.margin>
+                                    <Insets right="70.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="Ja">
+                                 <HBox.margin>
+                                    <Insets right="40.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="Nein" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="30.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefWidth="286.0">
+                           <children>
+                              <Label prefHeight="24.0" prefWidth="132.0" style="-fx-font-size: 20;" text="Schüttelfrost" wrapText="true">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <RadioButton fx:id="schuettelfrostyes" mnemonicParsing="false">
+                                 <HBox.margin>
+                                    <Insets left="33.0" />
+                                 </HBox.margin>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="Schuettelfrost" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="schuettelfrostno" mnemonicParsing="false" toggleGroup="$Schuettelfrost">
+                                 <HBox.margin>
+                                    <Insets left="33.0" />
+                                 </HBox.margin>
+                              </RadioButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefWidth="286.0">
+                           <children>
+                              <Label prefHeight="24.0" prefWidth="132.0" style="-fx-font-size: 20;" text="starkes Fieber" wrapText="true">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <RadioButton fx:id="starkesfieberyes" mnemonicParsing="false">
+                                 <HBox.margin>
+                                    <Insets left="33.0" />
+                                 </HBox.margin>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="starkesFieber" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="starkesfieberno" mnemonicParsing="false" toggleGroup="$starkesFieber">
+                                 <HBox.margin>
+                                    <Insets left="33.0" />
+                                 </HBox.margin>
+                              </RadioButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefWidth="286.0">
+                           <children>
+                              <Label prefHeight="24.0" prefWidth="132.0" style="-fx-font-size: 20;" text="Infektionen" wrapText="true">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <RadioButton fx:id="infektionenyes" mnemonicParsing="false">
+                                 <HBox.margin>
+                                    <Insets left="33.0" />
+                                 </HBox.margin>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="Infektionen" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="infektionenno" mnemonicParsing="false" toggleGroup="$Infektionen">
+                                 <HBox.margin>
+                                    <Insets left="33.0" />
+                                 </HBox.margin>
+                              </RadioButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefWidth="286.0">
+                           <children>
+                              <Label prefHeight="24.0" prefWidth="132.0" style="-fx-font-size: 20;" text="Durchfall" wrapText="true">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <RadioButton fx:id="durchfallyes" mnemonicParsing="false">
+                                 <HBox.margin>
+                                    <Insets left="33.0" />
+                                 </HBox.margin>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="Durchfall" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="durchfallno" mnemonicParsing="false" toggleGroup="$Durchfall">
+                                 <HBox.margin>
+                                    <Insets left="33.0" />
+                                 </HBox.margin>
+                              </RadioButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <Button fx:id="GZFragebogenbutton" mnemonicParsing="false" text="Speichern">
+                           <VBox.margin>
+                              <Insets left="209.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </center>
+</View>

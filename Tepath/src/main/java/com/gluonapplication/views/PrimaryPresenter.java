@@ -42,6 +42,14 @@ public class PrimaryPresenter {
     
     @FXML
     private Label message;
+    
+//    private void initialize() {
+//    	userName.setText(null);
+//    	password.setText(null);
+//    	message.setText(null);
+//    	
+//    	
+//    }
 
     @FXML
     void MakeLogin(ActionEvent event) {
