@@ -59,8 +59,6 @@ public void initialize() {
                  appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 
                          MobileApplication.getInstance().showLayer(GluonApplication.MENU_LAYER)));
                  appBar.setTitleText("Checklisten");
-                 appBar.getActionItems().add(MaterialDesignIcon.ARROW_BACK.button(e -> 
-                 MobileApplication.getInstance().switchToPreviousView()));
              }
          });
     }
