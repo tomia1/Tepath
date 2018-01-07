@@ -6,7 +6,7 @@ import java.sql.*;
 import java.util.*;
 import com.microsoft.sqlserver.jdbc.*;
 import java.sql.ResultSet;
-import java.sql.SQLException;
+//import java.sql.SQLException;
 
 import com.gluonapplication.GluonApplication;
 import com.gluonapplication.MyConn;
