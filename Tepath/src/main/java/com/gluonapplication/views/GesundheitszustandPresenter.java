@@ -13,12 +13,12 @@ public class GesundheitszustandPresenter {
 	
 	
 	@FXML
-	private View gesundheitsz;
+	private View Gesundheitszustand;
 	
 	
 	public void initialize() {
-		gesundheitsz.setShowTransitionFactory(BounceInRightTransition::new);
-   	 gesundheitsz.showingProperty().addListener((obs, oldValue, newValue) -> {
+		Gesundheitszustand.setShowTransitionFactory(BounceInRightTransition::new);
+   	 Gesundheitszustand.showingProperty().addListener((obs, oldValue, newValue) -> {
             if (newValue) {
                 AppBar appBar = MobileApplication.getInstance().getAppBar();
                 appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 

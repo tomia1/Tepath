@@ -16,7 +16,7 @@ public class GesundheitszustandView {
 	    
 	    public View getView() {
 	        try {
-	            View view = FXMLLoader.load(GesundheitszustandView.class.getResource("gesundheitszustand.fxml"));
+	            View view = FXMLLoader.load(GesundheitszustandView.class.getResource("Gesundheitszustand.fxml"));
 	            view.setName(name);
 	            return view;
 	        } catch (IOException e) {
