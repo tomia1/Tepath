@@ -13,70 +13,77 @@
          <children>
             <HBox prefHeight="36.0" prefWidth="335.0">
                <children>
-                  <Label fx:id="labelN" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="90.0" style="-fx-font-size: 20;" text="Name:">
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="90.0" style="-fx-font-size: 20;" text="Name:">
                      <HBox.margin>
-                        <Insets />
+                        <Insets right="5.0" />
                      </HBox.margin>
                      <padding>
                         <Insets left="5.0" />
                      </padding>
                   </Label>
-                  <Label fx:id="labelName" style="-fx-font-size: 20;" text="Dr. Peter Meier">
+                  <Label fx:id="labelNameHA" prefHeight="30.0" prefWidth="190.0" style="-fx-font-size: 20;">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
                   </Label>
                </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
             </HBox>
             <HBox prefHeight="29.0" prefWidth="335.0">
                <children>
-                  <Label fx:id="labelA" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="90.0" style="-fx-font-size: 20;" text="Adresse:">
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="90.0" style="-fx-font-size: 20;" text="Adresse:">
                      <HBox.margin>
-                        <Insets />
+                        <Insets right="5.0" />
                      </HBox.margin>
                      <padding>
                         <Insets left="5.0" />
                      </padding>
                   </Label>
-                  <VBox prefHeight="48.0" prefWidth="213.0">
-                     <children>
-                        <Label fx:id="labelStrasse" style="-fx-font-size: 20;" text="Blumenstrasse 13" />
-                        <Label fx:id="labelOrt" style="-fx-font-size: 20;" text="2502 Biel" />
-                     </children>
-                  </VBox>
+                  <Label fx:id="labelStrasseHA" prefHeight="30.0" prefWidth="190.0" style="-fx-font-size: 20;" wrapText="true" />
                </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
             </HBox>
             <HBox prefHeight="40.0" prefWidth="335.0">
                <children>
-                  <Label fx:id="labelT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="90.0" style="-fx-font-size: 20;" text="Telefon:">
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="90.0" style="-fx-font-size: 20;" text="Telefon:">
                      <HBox.margin>
-                        <Insets />
+                        <Insets right="5.0" />
                      </HBox.margin>
                      <padding>
                         <Insets left="5.0" />
                      </padding>
                   </Label>
-                  <Label fx:id="labelTelefon" style="-fx-font-size: 20;" text="031 111 11 11">
+                  <Label fx:id="labelTelefonHA" prefHeight="30.0" prefWidth="190.0" style="-fx-font-size: 20;">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
                   </Label>
                </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
             </HBox>
             <HBox prefHeight="44.0" prefWidth="335.0">
                <children>
-                  <Label fx:id="labelE" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="90.0" style="-fx-font-size: 20;" text="E-Mail:">
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="90.0" style="-fx-font-size: 20;" text="E-Mail:">
                      <padding>
                         <Insets left="5.0" />
                      </padding>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
                   </Label>
-                  <Label fx:id="labelMail" style="-fx-font-size: 20;" text="p.meier@hausarzt.ch" />
+                  <Label fx:id="labelMailHA" style="-fx-font-size: 20;" text="p.meier@hausarzt.ch" />
                </children>
             </HBox>
             <HBox prefHeight="203.0" prefWidth="335.0" />
          </children>
          <padding>
-            <Insets top="80.0" />
+            <Insets left="30.0" top="80.0" />
          </padding>
       </VBox>
    </center>

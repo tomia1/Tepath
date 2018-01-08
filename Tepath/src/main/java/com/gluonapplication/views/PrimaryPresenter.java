@@ -25,6 +25,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 
 public class PrimaryPresenter {
+	
+	String PatientID;
 
     public java.sql.Connection con;
 	
@@ -65,13 +67,17 @@ public class PrimaryPresenter {
     		int i=0;
     		String _user="";
     		String _pass="";
+    		String _PatID="";
     		while (rs.next()){
     			_user=rs.getString("Username");
     			_pass=rs.getString("Password");
+    			_PatID=rs.getString("Patient");
     			}
     		if (_user.equals(userName.getText()) && _pass.equals(password.getText() ) ) {
+
 	         	anmelden.setOnAction(e -> 
-	             MobileApplication.getInstance().switchView(GluonApplication.SECONDARY_VIEW)); 			
+	             MobileApplication.getInstance().switchView(GluonApplication.SECONDARY_VIEW)); 	
+    			PatientID = _PatID;
     		}
     		else {
          		message.setText("Benutzername oder Passwort falsch!");
