@@ -18,8 +18,7 @@ public class Spezialistkontakt1Presenter  {
 	
 
     public java.sql.Connection con;
-    
-    public String PatientID;
+
 	
     @FXML
     private View spezialistkontakt;
@@ -36,6 +35,7 @@ public class Spezialistkontakt1Presenter  {
     @FXML
     private Label labelMail;
     
+    String PatientID = PrimaryPresenter.PatientID;
     
     public void initialize() {
     	
@@ -48,7 +48,7 @@ public class Spezialistkontakt1Presenter  {
 		+ "dbo.Spezialist.Telefon FROM dbo.Spezialist INNER JOIN "
 		+ "dbo.Patienten ON dbo.Spezialist.ID_Spezialist = "
 		+ "dbo.Patienten.Spezialist "
-		+ " Where (dbo.Patienten.ID_Patient = 1 ) " ;
+		+ " Where (dbo.Patienten.ID_Patient =" + PatientID +")" ;
 
     	
 		ResultSet rs = st.executeQuery(query3);

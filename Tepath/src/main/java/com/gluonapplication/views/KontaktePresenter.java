@@ -13,7 +13,8 @@ import javafx.scene.control.Button;
 
 public class KontaktePresenter {
 	
-
+	String PatientID;
+	
 	    @FXML
 	    private View kontakt;
 

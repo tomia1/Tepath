@@ -18,8 +18,7 @@ public class Rehakontakt1Presenter  {
 	
     public java.sql.Connection con;
     
-    public String PatientID;
-	
+
 
     @FXML
     private View rehakontakt;
@@ -35,10 +34,11 @@ public class Rehakontakt1Presenter  {
 
     @FXML
     private Label labelMail;
-  
+    
+    String PatientID = PrimaryPresenter.PatientID;
 
     public void initialize() {
-    	
+
     	try {
         	
     	MyConn co = new MyConn();
@@ -48,7 +48,7 @@ public class Rehakontakt1Presenter  {
 		+ "dbo.Reha.Telefon FROM dbo.Reha INNER JOIN "
 		+ "dbo.Patienten ON dbo.Reha.ID_Reha = "
 		+ "dbo.Patienten.Reha "
-		+ " Where (dbo.Patienten.ID_Patient = 1 ) " ;
+		+ " Where (dbo.Patienten.ID_Patient =" + PatientID +")" ;
 
     	
 		ResultSet rs = st.executeQuery(query3);

@@ -20,7 +20,9 @@ public class Spitalkontakt1Presenter  {
 	
     public java.sql.Connection con;
     
-    public String PatientID;
+    String PatientID = PrimaryPresenter.PatientID;
+    
+
 
     @FXML
     private View spitalkontakt;
@@ -50,7 +52,7 @@ public class Spitalkontakt1Presenter  {
 		+ "dbo.Spital.Telefon FROM dbo.Spital INNER JOIN "
 		+ "dbo.Patienten ON dbo.Spital.ID_Spital = "
 		+ "dbo.Patienten.Spital"
-		+ " Where (dbo.Patienten.ID_Patient = 1 ) " ;
+		+ " Where (dbo.Patienten.ID_Patient =" + PatientID +")" ;
 
     	
 		ResultSet rs = st.executeQuery(query3);

@@ -26,7 +26,9 @@ import javafx.scene.paint.Color;
 
 public class PrimaryPresenter {
 	
-	String PatientID;
+	
+	public static String PatientID;
+	
 
     public java.sql.Connection con;
 	
@@ -64,7 +66,7 @@ public class PrimaryPresenter {
     		pst.setString(1, userName.getText());
     		pst.setString(2, password.getText());
     		ResultSet rs=pst.executeQuery();
-    		int i=0;
+
     		String _user="";
     		String _pass="";
     		String _PatID="";
@@ -74,7 +76,10 @@ public class PrimaryPresenter {
     			_PatID=rs.getString("ID_Patient");
     			}
     		if (_user.equals(userName.getText()) && _pass.equals(password.getText() ) ) {
-    			this.PatientID = _PatID;
+    			PatientID = _PatID;
+    			System.out.println(PatientID);
+//    			this.PatientID = rs.getString("ID_Patient");
+    			
 	         	anmelden.setOnAction(e -> 
 	             MobileApplication.getInstance().switchView(GluonApplication.SECONDARY_VIEW)); 	
     			

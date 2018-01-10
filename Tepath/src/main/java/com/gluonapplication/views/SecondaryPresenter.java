@@ -10,6 +10,8 @@ import com.gluonapplication.GluonApplication;
 import javafx.fxml.FXML;
 
 public class SecondaryPresenter {
+	
+	String PatientID;
 
     @FXML
     private View ablauf;
