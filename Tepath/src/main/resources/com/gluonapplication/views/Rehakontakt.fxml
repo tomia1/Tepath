@@ -7,78 +7,81 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<View fx:id="rehakontakt" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" stylesheets="@kontakte.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gluonapplication.views.Rehakontakt1Presenter">
-   <top>
-      <HBox prefHeight="48.0" prefWidth="350.0" BorderPane.alignment="CENTER" />
-   </top>
+<View fx:id="rehakontakt" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" stylesheets="@kontakte.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gluonapplication.views.Rehakontakt1Presenter">
    <center>
-      <VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+      <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="335.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="350.0">
+            <HBox prefWidth="335.0">
                <children>
-                  <Label fx:id="labelN" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="90.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Name:">
+                  <Label maxWidth="-Infinity" minWidth="-Infinity" prefWidth="90.0" style="-fx-font-size: 20;" text="Name:">
                      <HBox.margin>
-                        <Insets />
+                        <Insets right="5.0" />
                      </HBox.margin>
                      <padding>
                         <Insets left="5.0" />
                      </padding>
                   </Label>
-                  <Label fx:id="labelName" style="-fx-font-size: 20;" text="Schloss Mammern">
+                  <Label fx:id="labelNameR" prefWidth="179.0" style="-fx-font-size: 20;">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
                   </Label>
                </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
             </HBox>
-            <HBox prefHeight="44.0" prefWidth="346.0">
+            <HBox prefWidth="335.0">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+               <children>
+                  <Label maxWidth="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="90.0" style="-fx-font-size: 20;" text="Adresse:">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="labelStrasseR" prefWidth="179.0" style="-fx-font-size: 20;" wrapText="true" />
+               </children>
+            </HBox>
+            <HBox prefWidth="335.0">
+               <children>
+                  <Label maxWidth="-Infinity" minWidth="-Infinity" prefWidth="90.0" style="-fx-font-size: 20;" text="Telefon:">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="labelTelefonR" prefWidth="179.0" style="-fx-font-size: 20;" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefWidth="335.0">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
                <children>
-                  <Label fx:id="labelA" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="90.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Adresse:">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
+                  <Label maxWidth="-Infinity" minWidth="-Infinity" prefWidth="90.0" style="-fx-font-size: 20;" text="E-Mail:">
                      <padding>
                         <Insets left="5.0" />
                      </padding>
-                  </Label>
-                  <VBox prefHeight="48.0" prefWidth="233.0">
-                     <children>
-                        <Label fx:id="labelStrasse" style="-fx-font-size: 20;" text="Aarbergstrasse 60" />
-                        <Label fx:id="labelOrt" style="-fx-font-size: 20;" text="2503 Biel" />
-                     </children>
-                  </VBox>
-               </children>
-            </HBox>
-            <HBox alignment="CENTER_LEFT" prefHeight="31.0" prefWidth="350.0">
-               <children>
-                  <Label fx:id="labelT" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="90.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Telefon:">
                      <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                     <padding>
-                        <Insets left="5.0" />
-                     </padding>
-                  </Label>
-                  <Label fx:id="labelTelefon" prefHeight="0.0" prefWidth="145.0" style="-fx-font-size: 20;" text="032 328 29 95" />
+                        <Insets right="5.0" />
+                     </HBox.margin></Label>
+                  <Label fx:id="labelMail" prefWidth="179.0" style="-fx-font-size: 20;" text="info@schlossmammern.ch" wrapText="true" />
                </children>
             </HBox>
-            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="250.0">
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-               <children>
-                  <Label fx:id="labelE" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="90.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="E-Mail:">
-                     <padding>
-                        <Insets left="5.0" />
-                     </padding></Label>
-                  <Label fx:id="labelMail" style="-fx-font-size: 20;" text="info@schlossmammern.ch" />
-               </children>
-            </HBox>
-            <HBox prefHeight="221.0" prefWidth="350.0" />
          </children>
+         <padding>
+            <Insets left="30.0" top="80.0" />
+         </padding>
       </VBox>
    </center>
 </View>

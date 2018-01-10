@@ -1,6 +1,10 @@
 package com.gluonapplication.views;
 
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 import com.gluonapplication.GluonApplication;
+import com.gluonapplication.MyConn;
 import com.gluonhq.charm.glisten.animation.BounceInRightTransition;
 import com.gluonhq.charm.glisten.application.MobileApplication;
 import com.gluonhq.charm.glisten.control.AppBar;
@@ -13,42 +17,61 @@ import javafx.scene.control.Label;
 
 public class Apothekekontakt1Presenter  {
 	
+	
+    public java.sql.Connection con;
+    
+    public String PatientID;
 
-	@FXML
+    @FXML
     private View apothekekontakt;
 
     @FXML
-    private Label labelN;
+    private Label labelNameAP;
 
     @FXML
-    private Label labelName;
+    private Label labelStrasseAP;
 
     @FXML
-    private Label labelA;
-
-    @FXML
-    private Label labelStrasse;
-
-    @FXML
-    private Label labelOrt;
-
-    @FXML
-    private Label labelT;
-
-    @FXML
-    private Label labelTelefon;
-
-    @FXML
-    private Label labelE;
+    private Label labelTelefonAP;
 
     @FXML
     private Label labelMail;
-	
-//    protected void updateAppBar(AppBar appBar) {
-//        appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> switchView(SECONDARY_VIEW)));
-//        appBar.setTitleText("Vor Rehaeintritt");
-//    }
+    
+    
     public void initialize() {
+    	
+    	try {
+        	
+    	MyConn co = new MyConn();
+		con=co.getconn();
+		Statement st = con.createStatement();
+    	String query3 ="SELECT dbo.Apothek.Name, dbo.Apothek.Adresse, "
+		+ "dbo.Apothek.Telefon FROM dbo.Apothek INNER JOIN "
+		+ "dbo.Patienten ON dbo.Apothek.ID_Apotheke = "
+		+ "dbo.Patienten.Apotheke "
+		+ " Where (dbo.Patienten.ID_Patient = 1 ) " ;
+
+    	
+		ResultSet rs = st.executeQuery(query3);
+		
+		String _Name="";
+		String _Strasse="";
+		String _Telefon="";
+		while (rs.next()){
+			_Name=rs.getString("Name");
+			_Strasse=rs.getString("Adresse");
+			_Telefon=rs.getString("Telefon");
+			
+			labelNameAP.setText(_Name);
+			labelStrasseAP.setText(_Strasse);
+			labelTelefonAP.setText(_Telefon);
+			}
+    	}
+
+		catch(Exception exc){
+			exc.printStackTrace();
+		}
+    	
     	apothekekontakt.setShowTransitionFactory(BounceInRightTransition::new);
     	apothekekontakt.showingProperty().addListener((obs, oldValue, newValue) -> {
             if (newValue) {

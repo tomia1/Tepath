@@ -49,9 +49,8 @@ public class Hausarztkontakt1Presenter  {
     	String query3 ="SELECT dbo.Hausarzt.Name, dbo.Hausarzt.Adresse, "
 		+ "dbo.Hausarzt.Telefon FROM dbo.Hausarzt INNER JOIN "
 		+ "dbo.Patienten ON dbo.Hausarzt.ID_Hausarzt = "
-		+ "dbo.Patienten.Hausarzt INNER JOIN dbo.login "
-		+ "ON dbo.Patienten.ID_Patient = dbo.login.Patient "
-		+ " Where (dbo.login.Patient = " + PatientID + ") " ;
+		+ "dbo.Patienten.Hausarzt"
+		+ " Where (dbo.Patienten.ID_Patient = 1 ) " ;
 
     	
 		ResultSet rs = st.executeQuery(query3);
@@ -73,54 +72,7 @@ public class Hausarztkontakt1Presenter  {
 		catch(Exception exc){
 			exc.printStackTrace();
 		}
-//		
-//		
-//		con.close();
-//		return listHausarzt;
-//	    }
-    	
-    	
-    	
-    	
-//      	MyConn co = new MyConn();
-//    	con=co.getconn();
-//    	String query1 ="Select * from login where Username=? and Password=?";
-//    	
-//    	String query2 ="SELECT dbo.Hausarzt.Name, dbo.Hausarzt.Adresse, "
-//    			+ "dbo.Hausarzt.Telefon FROM dbo.Hausarzt INNER JOIN "
-//    			+ "dbo.Patienten ON dbo.Hausarzt.ID_Hausarzt = "
-//    			+ "dbo.Patienten.Hausarzt INNER JOIN dbo.login "
-//    			+ "ON dbo.Patienten.ID_Patient = dbo.login.Patient "
-//    			+ "WHERE Name=? and Adresse=? and Telefon=?"
-//    			+ "(dbo.login.Patient = "
-//    			+ PatientID + ")";
-//			
-//    	try {
-//    		PreparedStatement pst=con.prepareStatement(query2);
-//    		pst.setString(1, labelNameHA.getText());
-//    		pst.setString(2, labelStrasseHA.getText());
-//    		pst.setString(3, labelTelefonHA.getText());
-//    		
-//    		ResultSet rs=pst.executeQuery();
-//    		int i=0;
-//    		String _Name="";
-//    		String _Strasse="";
-//    		String _Telefon="";
-//    		while (rs.next()){
-//    			_Name=rs.getString("Name");
-//    			_Strasse=rs.getString("Adresse");
-//    			_Telefon=rs.getString("Telefon");
-//    			
-//    			labelNameHA.setText(_Name);
-//    			labelStrasseHA.setText(_Strasse);
-//    			labelTelefonHA.setText(_Telefon);
-//    			}
-//
-//    	}
-//    	catch (SQLException e1) {
-//    		e1.printStackTrace();
-//    	
-//    	}
+
     	
     	hausarztkontakt1.setShowTransitionFactory(BounceInRightTransition::new);
     	hausarztkontakt1.showingProperty().addListener((obs, oldValue, newValue) -> {

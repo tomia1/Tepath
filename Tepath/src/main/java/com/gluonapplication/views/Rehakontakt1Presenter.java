@@ -1,6 +1,10 @@
 package com.gluonapplication.views;
 
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 import com.gluonapplication.GluonApplication;
+import com.gluonapplication.MyConn;
 import com.gluonhq.charm.glisten.animation.BounceInRightTransition;
 import com.gluonhq.charm.glisten.application.MobileApplication;
 import com.gluonhq.charm.glisten.control.AppBar;
@@ -12,48 +16,61 @@ import javafx.scene.control.Label;
 
 public class Rehakontakt1Presenter  {
 	
+    public java.sql.Connection con;
+    
+    public String PatientID;
+	
 
     @FXML
     private View rehakontakt;
-    
-    @FXML
-    private Label labelN;
 
     @FXML
-    private Label labelName;
+    private Label labelNameR;
 
     @FXML
-    private Label labelA;
+    private Label labelStrasseR;
 
     @FXML
-    private Label labelStrasse;
-
-    @FXML
-    private Label labelOrt;
-
-    @FXML
-    private Label labelT;
-
-    @FXML
-    private Label labelTelefon;
-
-    @FXML
-    private Label labelE;
+    private Label labelTelefonR;
 
     @FXML
     private Label labelMail;
   
 
-//    protected void updateAppBar(AppBar appBar) {
-//        appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> switchView(SECONDARY_VIEW)));
-//        appBar.setTitleText("Vor Rehaeintritt");
-//    @FXML
-//    void mybuttonClick(ActionEvent event) {
-//    	rahakontakt.setOnAction(e -> 
-//        MobileApplication.getInstance().switchView(GluonApplication.KONTAKTE_VIEW));
-//    }
-//    }
     public void initialize() {
+    	
+    	try {
+        	
+    	MyConn co = new MyConn();
+		con=co.getconn();
+		Statement st = con.createStatement();
+    	String query3 ="SELECT dbo.Reha.Name, dbo.Reha.Adresse, "
+		+ "dbo.Reha.Telefon FROM dbo.Reha INNER JOIN "
+		+ "dbo.Patienten ON dbo.Reha.ID_Reha = "
+		+ "dbo.Patienten.Reha "
+		+ " Where (dbo.Patienten.ID_Patient = 1 ) " ;
+
+    	
+		ResultSet rs = st.executeQuery(query3);
+		
+		String _Name="";
+		String _Strasse="";
+		String _Telefon="";
+		while (rs.next()){
+			_Name=rs.getString("Name");
+			_Strasse=rs.getString("Adresse");
+			_Telefon=rs.getString("Telefon");
+			
+			labelNameR.setText(_Name);
+			labelStrasseR.setText(_Strasse);
+			labelTelefonR.setText(_Telefon);
+			}
+    	}
+
+		catch(Exception exc){
+			exc.printStackTrace();
+		}
+    	
     	rehakontakt.setShowTransitionFactory(BounceInRightTransition::new);
     	rehakontakt.showingProperty().addListener((obs, oldValue, newValue) -> {
             if (newValue) {

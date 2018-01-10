@@ -1,6 +1,10 @@
 package com.gluonapplication.views;
 
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 import com.gluonapplication.GluonApplication;
+import com.gluonapplication.MyConn;
 import com.gluonhq.charm.glisten.animation.BounceInRightTransition;
 import com.gluonhq.charm.glisten.application.MobileApplication;
 import com.gluonhq.charm.glisten.control.AppBar;
@@ -13,41 +17,60 @@ import javafx.scene.control.Label;
 public class Spezialistkontakt1Presenter  {
 	
 
+    public java.sql.Connection con;
+    
+    public String PatientID;
+	
     @FXML
     private View spezialistkontakt;
-    
-    @FXML
-    private Label labelN;
 
     @FXML
-    private Label labelName;
+    private Label labelNameSP;
 
     @FXML
-    private Label labelA;
+    private Label labelStrasseSP;
 
     @FXML
-    private Label labelStrasse;
-
-    @FXML
-    private Label labelOrt;
-
-    @FXML
-    private Label LabelT;
-
-    @FXML
-    private Label labelTelefon;
-
-    @FXML
-    private Label labelE;
+    private Label labelTelefonSP;
 
     @FXML
     private Label labelMail;
-
-//    protected void updateAppBar(AppBar appBar) {
-//        appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> switchView(SECONDARY_VIEW)));
-//        appBar.setTitleText("Vor Rehaeintritt");
-//    }
+    
+    
     public void initialize() {
+    	
+    	try {
+        	
+    	MyConn co = new MyConn();
+		con=co.getconn();
+		Statement st = con.createStatement();
+    	String query3 ="SELECT dbo.Spezialist.Name, dbo.Spezialist.Adresse, "
+		+ "dbo.Spezialist.Telefon FROM dbo.Spezialist INNER JOIN "
+		+ "dbo.Patienten ON dbo.Spezialist.ID_Spezialist = "
+		+ "dbo.Patienten.Spezialist "
+		+ " Where (dbo.Patienten.ID_Patient = 1 ) " ;
+
+    	
+		ResultSet rs = st.executeQuery(query3);
+		
+		String _Name="";
+		String _Strasse="";
+		String _Telefon="";
+		while (rs.next()){
+			_Name=rs.getString("Name");
+			_Strasse=rs.getString("Adresse");
+			_Telefon=rs.getString("Telefon");
+			
+			labelNameSP.setText(_Name);
+			labelStrasseSP.setText(_Strasse);
+			labelTelefonSP.setText(_Telefon);
+			}
+    	}
+
+		catch(Exception exc){
+			exc.printStackTrace();
+		}
+    	
     	spezialistkontakt.setShowTransitionFactory(BounceInRightTransition::new);
     	spezialistkontakt.showingProperty().addListener((obs, oldValue, newValue) -> {
             if (newValue) {

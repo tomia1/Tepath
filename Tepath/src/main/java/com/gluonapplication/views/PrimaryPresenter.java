@@ -58,7 +58,7 @@ public class PrimaryPresenter {
     	
     	MyConn co = new MyConn();
     	con=co.getconn();
-    	String query ="Select * from login where Username=? and Password=?";
+    	String query ="Select * from Patienten where Username=? and Password=?";
     	try {
     		PreparedStatement pst=con.prepareStatement(query);
     		pst.setString(1, userName.getText());
@@ -71,13 +71,13 @@ public class PrimaryPresenter {
     		while (rs.next()){
     			_user=rs.getString("Username");
     			_pass=rs.getString("Password");
-    			_PatID=rs.getString("Patient");
+    			_PatID=rs.getString("ID_Patient");
     			}
     		if (_user.equals(userName.getText()) && _pass.equals(password.getText() ) ) {
-
+    			this.PatientID = _PatID;
 	         	anmelden.setOnAction(e -> 
 	             MobileApplication.getInstance().switchView(GluonApplication.SECONDARY_VIEW)); 	
-    			PatientID = _PatID;
+    			
     		}
     		else {
          		message.setText("Benutzername oder Passwort falsch!");

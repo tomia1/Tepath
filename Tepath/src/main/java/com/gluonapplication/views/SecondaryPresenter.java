@@ -12,15 +12,15 @@ import javafx.fxml.FXML;
 public class SecondaryPresenter {
 
     @FXML
-    private View secondary;
+    private View ablauf;
 
     public void initialize() {
-        secondary.setShowTransitionFactory(BounceInRightTransition::new);
+        ablauf.setShowTransitionFactory(BounceInRightTransition::new);
         
-        secondary.getLayers().add(new FloatingActionButton(MaterialDesignIcon.INFO.text, 
-            e -> System.out.println("Info")).getLayer());
+//        ablauf.getLayers().add(new FloatingActionButton(MaterialDesignIcon.INFO.text, 
+//            e -> System.out.println("Info")).getLayer());
         
-        secondary.showingProperty().addListener((obs, oldValue, newValue) -> {
+        ablauf.showingProperty().addListener((obs, oldValue, newValue) -> {
             if (newValue) {
                 AppBar appBar = MobileApplication.getInstance().getAppBar();
                 appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 

@@ -1,6 +1,10 @@
 package com.gluonapplication.views;
 
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 import com.gluonapplication.GluonApplication;
+import com.gluonapplication.MyConn;
 import com.gluonhq.charm.glisten.animation.BounceInRightTransition;
 import com.gluonhq.charm.glisten.application.MobileApplication;
 import com.gluonhq.charm.glisten.control.AppBar;
@@ -13,46 +17,63 @@ import javafx.scene.control.Label;
 
 public class Spitalkontakt1Presenter  {
 	
+	
+    public java.sql.Connection con;
+    
+    public String PatientID;
 
     @FXML
     private View spitalkontakt;
+
+    @FXML
+    private Label labelNameSPI;
+
+    @FXML
+    private Label labelStrasseSPI;
+
+    @FXML
+    private Label labelTelefonSPI;
+
+    @FXML
+    private Label labelMail;
     
-    @FXML
-    private Label labelN;
-
-    @FXML
-    private Label labelName;
-
-    @FXML
-    private Label labelA;
-
-    @FXML
-    private Label labelStrasse;
-
-    @FXML
-    private Label labelOrt;
-
-    @FXML
-    private Label labelT;
-
-    @FXML
-    private Label labelTelefon;
-
-    @FXML
-    private Label labelE;
-
-   // @FXML
-//    private Label labelMail;
-//    void emailSenden(){
-//    	labelE.setOnAction(e -> 
-//    	sendEmail());
-   // }
-
-//    protected void updateAppBar(AppBar appBar) {
-//        appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> switchView(SECONDARY_VIEW)));
-//        appBar.setTitleText("Vor Rehaeintritt");
-//    }
+    
+    
     public void initialize() {
+    	
+    	try {
+        	
+    	MyConn co = new MyConn();
+		con=co.getconn();
+		Statement st = con.createStatement();
+    	String query3 ="SELECT dbo.Spital.Name, dbo.Spital.Adresse, "
+		+ "dbo.Spital.Telefon FROM dbo.Spital INNER JOIN "
+		+ "dbo.Patienten ON dbo.Spital.ID_Spital = "
+		+ "dbo.Patienten.Spital"
+		+ " Where (dbo.Patienten.ID_Patient = 1 ) " ;
+
+    	
+		ResultSet rs = st.executeQuery(query3);
+		
+		String _Name="";
+		String _Strasse="";
+		String _Telefon="";
+		while (rs.next()){
+			_Name=rs.getString("Name");
+			_Strasse=rs.getString("Adresse");
+			_Telefon=rs.getString("Telefon");
+			
+			labelNameSPI.setText(_Name);
+			labelStrasseSPI.setText(_Strasse);
+			labelTelefonSPI.setText(_Telefon);
+			}
+    	}
+
+		catch(Exception exc){
+			exc.printStackTrace();
+		}
+    	
+    	
     	spitalkontakt.setShowTransitionFactory(BounceInRightTransition::new);
     	spitalkontakt.showingProperty().addListener((obs, oldValue, newValue) -> {
             if (newValue) {

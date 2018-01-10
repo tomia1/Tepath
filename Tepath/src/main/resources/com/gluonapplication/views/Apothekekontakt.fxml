@@ -40,79 +40,81 @@
 <?import javafx.scene.layout.VBox?>
 
 <View fx:id="apothekekontakt" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" stylesheets="@kontakte.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gluonapplication.views.Apothekekontakt1Presenter">
-   <top>
-      <HBox prefHeight="48.0" prefWidth="350.0" BorderPane.alignment="CENTER" />
-   </top>
    <center>
-      <VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+      <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="335.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="350.0">
+            <HBox prefWidth="335.0">
                <children>
-                  <Label fx:id="labelN" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="90.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Name:">
+                  <Label maxWidth="-Infinity" minWidth="-Infinity" prefWidth="90.0" style="-fx-font-size: 20;" text="Name:">
                      <HBox.margin>
-                        <Insets />
+                        <Insets right="5.0" />
                      </HBox.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
                   </Label>
-                  <Label fx:id="labelName" style="-fx-font-size: 20;" text="Apothecarium Biel">
+                  <Label fx:id="labelNameAP" prefWidth="179.0" style="-fx-font-size: 20;">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
                   </Label>
                </children>
                <VBox.margin>
-                  <Insets left="20.0" />
+                  <Insets bottom="20.0" />
                </VBox.margin>
             </HBox>
-            <HBox prefHeight="44.0" prefWidth="346.0">
+            <HBox prefWidth="335.0">
                <VBox.margin>
-                  <Insets left="20.0" />
+                  <Insets bottom="20.0" />
                </VBox.margin>
                <children>
-                  <Label fx:id="labelA" graphicTextGap="0.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="90.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Adresse:">
+                  <Label maxWidth="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="90.0" style="-fx-font-size: 20;" text="Adresse:">
                      <HBox.margin>
-                        <Insets />
+                        <Insets right="5.0" />
                      </HBox.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
                   </Label>
-                  <VBox prefHeight="48.0" prefWidth="203.0">
-                     <children>
-                        <Label fx:id="labelStrasse" style="-fx-font-size: 20;" text="Lerchenweg 5" />
-                        <Label fx:id="labelOrt" style="-fx-font-size: 20;" text="2502 Biel" />
-                     </children>
-                  </VBox>
+                  <Label fx:id="labelStrasseAP" prefWidth="179.0" style="-fx-font-size: 20;" wrapText="true" />
                </children>
             </HBox>
-            <HBox alignment="CENTER_LEFT" prefHeight="31.0" prefWidth="350.0">
+            <HBox prefWidth="335.0">
                <children>
-                  <Label fx:id="labelT" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="90.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Telefon:">
+                  <Label maxWidth="-Infinity" minWidth="-Infinity" prefWidth="90.0" style="-fx-font-size: 20;" text="Telefon:">
                      <HBox.margin>
-                        <Insets />
+                        <Insets right="5.0" />
                      </HBox.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
                   </Label>
-                  <Label fx:id="labelTelefon" prefHeight="0.0" prefWidth="145.0" style="-fx-font-size: 20;" text="032 412 73 29">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </Label>
+                  <Label fx:id="labelTelefonAP" prefWidth="179.0" style="-fx-font-size: 20;" />
                </children>
                <VBox.margin>
-                  <Insets left="20.0" />
+                  <Insets bottom="20.0" />
                </VBox.margin>
             </HBox>
-            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="250.0">
+            <HBox prefWidth="335.0">
                <VBox.margin>
-                  <Insets left="20.0" />
+                  <Insets />
                </VBox.margin>
                <children>
-                  <Label fx:id="labelE" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="90.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="E-Mail:" />
-                  <Label fx:id="labelMail" prefHeight="18.0" prefWidth="204.0" style="-fx-font-size: 20;" text="info@apothecarium.ch">
+                  <Label maxWidth="-Infinity" minWidth="-Infinity" prefWidth="90.0" style="-fx-font-size: 20;" text="E-Mail:">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
                      <HBox.margin>
-                        <Insets />
+                        <Insets right="5.0" />
                      </HBox.margin>
                   </Label>
+                  <Label fx:id="labelMail" prefWidth="179.0" style="-fx-font-size: 20;" text="info@schlosssmammern.ch" wrapText="true" />
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="244.0" prefWidth="350.0" />
          </children>
+         <padding>
+            <Insets left="30.0" top="80.0" />
+         </padding>
       </VBox>
    </center>
 </View>

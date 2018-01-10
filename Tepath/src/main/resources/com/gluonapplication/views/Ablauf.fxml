@@ -18,11 +18,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 
-<View fx:id="ablauf" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" stylesheets="@../../git/Tepath/Tepath/src/main/resources/com/gluonapplication/views/secondary.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gluonapplication.views.AblaufPresenter">
+<View fx:id="ablauf" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" stylesheets="@../../git/Tepath/Tepath/src/main/resources/com/gluonapplication/views/secondary.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gluonapplication.views.SecondaryPresenter">
    <top>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <ScrollPane layoutX="2.0" layoutY="28.0" prefHeight="484.0" prefWidth="350.0">
+            <ScrollPane layoutX="2.0" layoutY="28.0" prefHeight="442.0" prefWidth="350.0">
                <padding>
                   <Insets left="10.0" top="20.0" />
                </padding>
@@ -143,7 +143,7 @@
    <bottom>
       <AnchorPane prefHeight="92.0" prefWidth="350.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="93.0" prefWidth="350.0" style="-fx-font-size: 25; -fx-background-color: #b4c7e7;" text="Noch X Tage bis zum nächsten Termin" wrapText="true">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="-46.0" prefHeight="93.0" prefWidth="350.0" style="-fx-font-size: 25; -fx-background-color: #b4c7e7;" text="Noch X Tage bis zum nächsten Termin" wrapText="true">
                <padding>
                   <Insets left="60.0" />
                </padding>
