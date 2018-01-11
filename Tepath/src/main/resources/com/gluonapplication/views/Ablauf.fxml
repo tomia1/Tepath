@@ -115,9 +115,9 @@
                                  <content>
                                     <TableView fx:id="tableNotes" editable="true" prefHeight="244.0" prefWidth="332.0">
                                       <columns>
-                                        <TableColumn fx:id="zustand" prefWidth="36.0" />
-                                          <TableColumn fx:id="datum" prefWidth="115.0" />
-                                          <TableColumn fx:id="name" prefWidth="172.0" />
+                                        <TableColumn fx:id="zustand" prefWidth="96.0" />
+                                          <TableColumn fx:id="datum" prefWidth="136.0" />
+                                          <TableColumn fx:id="name" prefWidth="91.0" />
                                       </columns>
                                     </TableView>
                                  </content>
