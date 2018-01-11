@@ -27,7 +27,7 @@ import javafx.scene.paint.Color;
 public class PrimaryPresenter {
 	
 	
-	public static String PatientID;
+
 	
 
     public java.sql.Connection con;
@@ -54,6 +54,9 @@ public class PrimaryPresenter {
 //    	
 //    	
 //    }
+    
+    
+	public static String PatientID;
 
     @FXML
     void MakeLogin(ActionEvent event) {

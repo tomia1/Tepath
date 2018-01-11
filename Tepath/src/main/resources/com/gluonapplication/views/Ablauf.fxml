@@ -3,88 +3,41 @@
 <?import com.gluonhq.charm.glisten.mvc.View?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Accordion?>
-<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TitledPane?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 
-<View fx:id="ablauf" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" stylesheets="@../../git/Tepath/Tepath/src/main/resources/com/gluonapplication/views/secondary.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gluonapplication.views.SecondaryPresenter">
+<View fx:id="ablauf" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" stylesheets="@secondary.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gluonapplication.views.SecondaryPresenter">
    <top>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="126.0" prefWidth="354.0" BorderPane.alignment="CENTER">
          <children>
-            <ScrollPane layoutX="2.0" layoutY="28.0" prefHeight="442.0" prefWidth="350.0">
-               <padding>
-                  <Insets left="10.0" top="20.0" />
-               </padding>
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0">
-                     <children>
-                        <VBox layoutY="-1.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="184.0" prefWidth="332.0" AnchorPane.leftAnchor="0.0">
-                           <children>
-                              <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="Ihr Ablauf ist wie folgt:">
-                                 <VBox.margin>
-                                    <Insets bottom="30.0" left="20.0" top="20.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <HBox>
-                                 <VBox.margin>
-                                    <Insets top="20.0" />
-                                 </VBox.margin>
-                              </HBox>
-                              <AnchorPane prefHeight="90.0" prefWidth="265.0">
-                                 <children>
-                                    <GridPane prefHeight="90.0" prefWidth="330.0">
-                                      <columnConstraints>
-                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="82.0" minWidth="10.0" prefWidth="34.0" />
-                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="10.0" prefWidth="39.0" />
-                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="248.0" minWidth="10.0" prefWidth="221.0" />
-                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="76.0" minWidth="10.0" prefWidth="41.0" />
-                                      </columnConstraints>
-                                      <rowConstraints>
-                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                      </rowConstraints>
-                                    </GridPane>
-                                 </children>
-                              </AnchorPane>
-                           </children>
-                        </VBox>
-                     </children>
-                  </AnchorPane>
-               </content>
-            </ScrollPane>
-            <Accordion>
+            <Accordion fx:id="legendeInhalt">
               <panes>
-                <TitledPane expanded="false" text="Legende">
+                <TitledPane fx:id="legendeTitel" expanded="false" prefWidth="354.0" text="Legende">
                   <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="352.0">
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="127.0" prefWidth="352.0">
                            <children>
                               <VBox prefWidth="350.0">
                                  <children>
                                     <HBox prefWidth="200.0">
                                        <children>
-                                          <Circle radius="15.0" stroke="BLACK" strokeType="INSIDE">
+                                          <Circle fx:id="erledigtSymbol" radius="15.0" stroke="BLACK" strokeType="INSIDE">
                                              <HBox.margin>
                                                 <Insets right="10.0" />
                                              </HBox.margin>
                                           </Circle>
-                                          <Label style="-fx-font-size: 20;" text="Erledigt">
+                                          <Label fx:id="erledigtLabel" style="-fx-font-size: 20;" text="Erledigt">
                                              <HBox.margin>
                                                 <Insets right="75.0" />
                                              </HBox.margin>
                                           </Label>
-                                          <CheckBox alignment="TOP_CENTER" graphicTextGap="6.0" mnemonicParsing="false" selected="true" style="-fx-font-size: 20;" text="Checkliste" />
                                        </children>
                                        <VBox.margin>
                                           <Insets bottom="10.0" />
@@ -92,25 +45,16 @@
                                     </HBox>
                                     <HBox prefWidth="200.0">
                                        <children>
-                                          <Circle fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE">
+                                          <Circle fx:id="offenSymbol" fill="WHITE" radius="15.0" stroke="BLACK" strokeType="INSIDE">
                                              <HBox.margin>
                                                 <Insets right="10.0" />
                                              </HBox.margin>
                                           </Circle>
-                                          <Label style="-fx-font-size: 20;" text="noch offen">
+                                          <Label fx:id="offenLabel" style="-fx-font-size: 20;" text="noch offen">
                                              <HBox.margin>
                                                 <Insets right="46.0" />
                                              </HBox.margin>
                                           </Label>
-                                          <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../info.PNG" />
-                                             </image>
-                                             <HBox.margin>
-                                                <Insets right="10.0" />
-                                             </HBox.margin>
-                                          </ImageView>
-                                          <Label style="-fx-font-size: 20;" text="Information" />
                                        </children>
                                        <VBox.margin>
                                           <Insets bottom="10.0" />
@@ -118,12 +62,12 @@
                                     </HBox>
                                     <HBox prefWidth="200.0">
                                        <children>
-                                          <Circle fill="#b3bf32" radius="15.0" stroke="BLACK" strokeType="INSIDE">
+                                          <Circle fx:id="verschobenSymbol" fill="#b3bf32" radius="15.0" stroke="BLACK" strokeType="INSIDE">
                                              <HBox.margin>
                                                 <Insets right="10.0" />
                                              </HBox.margin>
                                           </Circle>
-                                          <Label style="-fx-font-size: 20;" text="verschoben" />
+                                          <Label fx:id="verschobenLabel" style="-fx-font-size: 20;" text="verschoben" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -143,12 +87,51 @@
    <bottom>
       <AnchorPane prefHeight="92.0" prefWidth="350.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutY="-46.0" prefHeight="93.0" prefWidth="350.0" style="-fx-font-size: 25; -fx-background-color: #b4c7e7;" text="Noch X Tage bis zum nächsten Termin" wrapText="true">
-               <padding>
-                  <Insets left="60.0" />
-               </padding>
-            </Label>
+            <Label fx:id="coundownLabel" alignment="CENTER" graphicTextGap="0.0" layoutY="-46.0" prefHeight="93.0" prefWidth="350.0" style="-fx-font-size: 25; -fx-background-color: #b4c7e7;" text="Noch           Tage bis zum nächsten Termin" textAlignment="CENTER" wrapText="true" />
+            <Label layoutX="99.0" layoutY="-38.0" prefHeight="40.0" prefWidth="58.0" style="-fx-font-weight: bold;" fx:id="xTage" />
          </children>
       </AnchorPane>
    </bottom>
+   <center>
+      <ScrollPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="284.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="297.0" prefWidth="347.0">
+               <children>
+                  <VBox layoutY="25.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="261.0" prefWidth="345.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label fx:id="ablaufLabel" graphicTextGap="0.0" style="-fx-font-size: 20; -fx-font-weight: bold;" text="Ihr Ablauf ist wie folgt:">
+                           <VBox.margin>
+                              <Insets left="20.0" top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <AnchorPane minWidth="-Infinity" prefHeight="235.0" prefWidth="345.0">
+                           <children>
+                              <ScrollPane layoutX="3.0" layoutY="-6.0" minWidth="-Infinity" prefHeight="200.0" prefWidth="340.0" AnchorPane.rightAnchor="2.0">
+                                 <content>
+                                    <TableView fx:id="tableNotes" editable="true" prefHeight="244.0" prefWidth="332.0">
+                                      <columns>
+                                        <TableColumn fx:id="zustand" prefWidth="36.0" />
+                                          <TableColumn fx:id="datum" prefWidth="115.0" />
+                                          <TableColumn fx:id="name" prefWidth="172.0" />
+                                      </columns>
+                                    </TableView>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+         <padding>
+            <Insets top="-20.0" />
+         </padding>
+      </ScrollPane>
+   </center>
 </View>
