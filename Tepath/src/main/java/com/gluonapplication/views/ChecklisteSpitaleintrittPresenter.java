@@ -9,25 +9,30 @@ import com.gluonhq.charm.glisten.visual.MaterialDesignIcon;
 
 import javafx.fxml.FXML;
 
+/**
+ * Diese Klasse ist die Ansicht mit der Checkliste für die Vorbereitung auf den
+ * Spitaleintritt.
+ * 
+ * @author Hager
+ *
+ */
 public class ChecklisteSpitaleintrittPresenter {
-	
 
-    @FXML
-    private View secondary;
+	@FXML
+	private View secondary;
 
+	public void initialize() {
+		secondary.setShowTransitionFactory(BounceInRightTransition::new);
+		secondary.showingProperty().addListener((obs, oldValue, newValue) -> {
+			if (newValue) {
+				AppBar appBar = MobileApplication.getInstance().getAppBar();
+				appBar.setNavIcon(MaterialDesignIcon.MENU
+						.button(e -> MobileApplication.getInstance().showLayer(GluonApplication.MENU_LAYER)));
+				appBar.setTitleText("Vor Spitaleintritt");
+				appBar.getActionItems().add(MaterialDesignIcon.ARROW_BACK
+						.button(e -> MobileApplication.getInstance().switchToPreviousView()));
 
-    public void initialize() {
-     secondary.setShowTransitionFactory(BounceInRightTransition::new);
-   	 secondary.showingProperty().addListener((obs, oldValue, newValue) -> {
-            if (newValue) {
-                AppBar appBar = MobileApplication.getInstance().getAppBar();
-                appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 
-                        MobileApplication.getInstance().showLayer(GluonApplication.MENU_LAYER)));
-                appBar.setTitleText("Vor Spitaleintritt");
-                appBar.getActionItems().add(MaterialDesignIcon.ARROW_BACK.button(e -> 
-                MobileApplication.getInstance().switchToPreviousView()));
-                
-            }
-        });
-    }
+			}
+		});
+	}
 }
