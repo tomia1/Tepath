@@ -1,6 +1,7 @@
 package com.gluonapplication.views;
 
 import java.sql.Connection;
+import java.util.Calendar;
 //import java.sql.Date;
 import java.util.Date;
 import java.sql.ResultSet;
@@ -91,7 +92,7 @@ public class SecondaryPresenter {
 	@FXML
     private TableColumn<Note, String> name;
     
-//	String PatientID = PrimaryPresenter.PatientID;
+	String PatientID = PrimaryPresenter.PatientID;
     
     private static Connection con;
     private static Statement stat;
@@ -115,29 +116,20 @@ public class SecondaryPresenter {
             MyConn co = new MyConn();
             con = co.getconn();
             stat = con.createStatement();
-            String query = "SELECT Zustand, Datum, Name FROM Termine";
-//            stat.executeUpdate("CREATE TABLE IF NOT EXISTS NotesDB (idno INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, Title VARCHAR(500), Description VARCHAR(1000), DateCreated DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL);");
-//            String _PatID="";
+            String query = "SELECT * FROM Termine WHERE (Patient ="+PatientID+")";
             ResultSet rs = stat.executeQuery(query);
             while (rs.next()) {
-//            	_PatID = rs.getString("ID_Patient");
                 Note nt = new Note();
                 nt.zustand.set(rs.getString("Zustand"));
                 nt.datum.set(rs.getString("Datum"));
                 nt.name.set(rs.getString("Name"));
                 dataNotes.add(nt);
-//                PatientID = _PatID;
-            }          
-            
+            }    
             	tableNotes.setItems(dataNotes);
+            	tableNotes.getSortOrder().add(datum);
         } catch (SQLException ex) {
         	ex.getMessage();
         }
-        
-//        ablauf.getLayers().add(new FloatingActionButton(MaterialDesignIcon.INFO.text, 
-//            e -> System.out.println("Info")).getLayer());
-        
-//        java.util.Date d1 = new GregorianCalendar(2000, 11, 31, 23, 59).getTime();
         
         try {            
             MyConn co = new MyConn();
@@ -148,13 +140,25 @@ public class SecondaryPresenter {
             Date dann = null;
             while (rs.next()) {
                 dann = rs.getDate("Datum");
-            }          
-            Date d1 = new GregorianCalendar().getTime();
-            d1 = dann;
-            Date today = new Date();
-            long diff = d1.getTime() - today.getTime();
+                
+            }      
+//            int a = rs.getRow();
+//            String z = rs.getString(a);
+////            Note z = tableNotes.getItems().get(0);
+////            for(int a=1; a<rs.;)
+//            if(!z.equals("offen")) {
+//            	a++;
+//            }
+            new GregorianCalendar();
+			Calendar d1 = Calendar.getInstance();
+//            d1 = dann;
+            long today = d1.getTimeInMillis();
+//            Date datTermin = new Date();
+            long dat = dann.getTime();
+            long diff = today - dat;
             String noch = String.valueOf(diff);
             xTage.setText(noch);
+            
         } catch (SQLException ex) {
         	ex.getMessage();
         }
