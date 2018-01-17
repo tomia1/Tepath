@@ -5,7 +5,6 @@ import com.gluonapplication.views.ChecklistView;
 import com.gluonapplication.views.ChecklisteRehaeintrittView;
 import com.gluonapplication.views.ChecklisteSpezialistenbesuchView;
 import com.gluonapplication.views.ChecklisteSpitaleintrittView;
-import com.gluonapplication.views.GesundheitszustandView;
 import com.gluonapplication.views.Hausarztkontakt1View;
 import com.gluonapplication.views.KontakteView;
 import com.gluonapplication.views.PrimaryView;
@@ -40,9 +39,7 @@ public class GluonApplication extends MobileApplication {
 																// den
 																// Checklisten
 	public static final String KONTAKTE_VIEW = "Kontakte"; // Konatkpersonen
-	public static final String GESUNDHEITSZUSTAND_VIEW = "Gesundheitszustand"; // Gesundheitszustand
-																				// des
-																				// Patientin
+	
 	public static final String CHECKLISTESPITALEINTRITT_VIEW = "Spitaleintritt";// Checkliste
 																				// vor
 																				// Spitaleintritt
@@ -70,7 +67,6 @@ public class GluonApplication extends MobileApplication {
 		addViewFactory(SECONDARY_VIEW, () -> new SecondaryView(SECONDARY_VIEW).getView());
 		addViewFactory(CHECKLIST_VIEW, () -> new ChecklistView(CHECKLIST_VIEW).getView());
 		addViewFactory(KONTAKTE_VIEW, () -> new KontakteView(KONTAKTE_VIEW).getView());
-		addViewFactory(GESUNDHEITSZUSTAND_VIEW, () -> new GesundheitszustandView(GESUNDHEITSZUSTAND_VIEW).getView());
 		addViewFactory(CHECKLISTESPITALEINTRITT_VIEW,
 				() -> new ChecklisteSpitaleintrittView(CHECKLISTESPITALEINTRITT_VIEW).getView());
 		addViewFactory(CHECKLISTESPEZIALISTENBESUCH_VIEW,

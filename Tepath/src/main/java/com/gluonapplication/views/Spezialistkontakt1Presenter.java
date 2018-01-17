@@ -14,73 +14,85 @@ import com.gluonhq.charm.glisten.visual.MaterialDesignIcon;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class Spezialistkontakt1Presenter  {
-	
+/**
+ * Diese Klasse beinhaltet die Darstellung der Kontaktinformationen des
+ * Spezialisten.
+ * 
+ * @author Hager
+ *
+ */
+public class Spezialistkontakt1Presenter {
 
-    public java.sql.Connection con;
+	public java.sql.Connection con;
 
-	
-    @FXML
-    private View spezialistkontakt;
+	@FXML
+	private View spezialistkontakt;
 
-    @FXML
-    private Label labelNameSP;
+	@FXML
+	private Label labelNameSP;
 
-    @FXML
-    private Label labelStrasseSP;
+	@FXML
+	private Label labelStrasseSP;
 
-    @FXML
-    private Label labelTelefonSP;
+	@FXML
+	private Label labelTelefonSP;
 
-    @FXML
-    private Label labelMail;
-    
-    String PatientID = PrimaryPresenter.PatientID;
-    
-    public void initialize() {
-    	
-    	try {
-        	
-    	MyConn co = new MyConn();
-		con=co.getconn();
-		Statement st = con.createStatement();
-    	String query3 ="SELECT dbo.Spezialist.Name, dbo.Spezialist.Adresse, "
-		+ "dbo.Spezialist.Telefon FROM dbo.Spezialist INNER JOIN "
-		+ "dbo.Patienten ON dbo.Spezialist.ID_Spezialist = "
-		+ "dbo.Patienten.Spezialist "
-		+ " Where (dbo.Patienten.ID_Patient =" + PatientID +")" ;
+	@FXML
+	private Label labelMail;
 
-    	
-		ResultSet rs = st.executeQuery(query3);
-		
-		String _Name="";
-		String _Strasse="";
-		String _Telefon="";
-		while (rs.next()){
-			_Name=rs.getString("Name");
-			_Strasse=rs.getString("Adresse");
-			_Telefon=rs.getString("Telefon");
-			
-			labelNameSP.setText(_Name);
-			labelStrasseSP.setText(_Strasse);
-			labelTelefonSP.setText(_Telefon);
+	String PatientID = PrimaryPresenter.PatientID;
+
+	/**
+	 * Es wird der Name, Adresse und Telefonnummer des Spezialisten aus der
+	 * Datenbank geholt, welche bei den eingeloggten Patienten abgespeichert
+	 * worden sind.
+	 */
+	public void initialize() {
+
+		try {
+
+			MyConn co = new MyConn();
+			con = co.getconn();
+			Statement st = con.createStatement();
+			String query3 = "SELECT dbo.Spezialist.Name, dbo.Spezialist.Adresse, "
+					+ "dbo.Spezialist.Telefon FROM dbo.Spezialist INNER JOIN "
+					+ "dbo.Patienten ON dbo.Spezialist.ID_Spezialist = " + "dbo.Patienten.Spezialist "
+					+ " Where (dbo.Patienten.ID_Patient =" + PatientID + ")";
+
+			ResultSet rs = st.executeQuery(query3);
+
+			String _Name = "";
+			String _Strasse = "";
+			String _Telefon = "";
+			while (rs.next()) {
+				_Name = rs.getString("Name");
+				_Strasse = rs.getString("Adresse");
+				_Telefon = rs.getString("Telefon");
+
+				labelNameSP.setText(_Name);
+				labelStrasseSP.setText(_Strasse);
+				labelTelefonSP.setText(_Telefon);
 			}
-    	}
+		}
 
-		catch(Exception exc){
+		catch (Exception exc) {
 			exc.printStackTrace();
 		}
-    	
-    	spezialistkontakt.setShowTransitionFactory(BounceInRightTransition::new);
-    	spezialistkontakt.showingProperty().addListener((obs, oldValue, newValue) -> {
-            if (newValue) {
-                AppBar appBar = MobileApplication.getInstance().getAppBar();
-                appBar.setNavIcon(MaterialDesignIcon.MENU.button(e -> 
-                        MobileApplication.getInstance().showLayer(GluonApplication.MENU_LAYER)));
-                appBar.setTitleText("Spezialist");
-                appBar.getActionItems().add(MaterialDesignIcon.ARROW_BACK.button(e -> 
-                MobileApplication.getInstance().switchToPreviousView()));
-            }
-        });
-    }
+		/**
+		 * Die ApplikationsBar beinhaltet die Ueberschrift "Spezialist" sowie
+		 * das Menue-Icon und eine Pfeil nach links, mit dessen Hilfe man auf
+		 * die vorherige Seite(Kontakte) gelangt.
+		 */
+		spezialistkontakt.setShowTransitionFactory(BounceInRightTransition::new);
+		spezialistkontakt.showingProperty().addListener((obs, oldValue, newValue) -> {
+			if (newValue) {
+				AppBar appBar = MobileApplication.getInstance().getAppBar();
+				appBar.setNavIcon(MaterialDesignIcon.MENU
+						.button(e -> MobileApplication.getInstance().showLayer(GluonApplication.MENU_LAYER)));
+				appBar.setTitleText("Spezialist");
+				appBar.getActionItems().add(MaterialDesignIcon.ARROW_BACK
+						.button(e -> MobileApplication.getInstance().switchToPreviousView()));
+			}
+		});
+	}
 }
